@@ -25,7 +25,7 @@ import blanco.dbmetadata.valueobject.BlancoDbMetaDataTableStructure;
 
 class WriteCsvForMetaInfoAll {
     /**
-     * ‘S‚Ä‚Ì•\‚ÉŠÖ‚·‚éî•ñ‚ğ‚Ğ‚Æ‚Â‚ÌCSVƒtƒ@ƒCƒ‹‚É‚Ü‚Æ‚ß‚Äì¬‚µ‚Ü‚·B
+     * å…¨ã¦ã®è¡¨ã«é–¢ã™ã‚‹æƒ…å ±ã‚’ã²ã¨ã¤ã®CSVãƒ•ã‚¡ã‚¤ãƒ«ã«ã¾ã¨ã‚ã¦ä½œæˆã—ã¾ã™ã€‚
      * 
      * @throws IOException
      * 
@@ -48,7 +48,7 @@ class WriteCsvForMetaInfoAll {
             BlancoDbMetaDataMeta2Csv.writeTableInfo(tableStructure, writer);
             writer.newLine();
 
-            writer.write("—ñ–¼,Œ^(Œ…),”ñNULL,åƒL[,”íQÆ,QÆ,ƒfƒtƒHƒ‹ƒg,”õl");
+            writer.write("åˆ—å,å‹(æ¡),éNULL,ä¸»ã‚­ãƒ¼,è¢«å‚ç…§,å‚ç…§,ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ,å‚™è€ƒ");
             writer.newLine();
 
             for (int indexColumn = 0; indexColumn < tableStructure.getColumns()
@@ -64,9 +64,9 @@ class WriteCsvForMetaInfoAll {
                 writer.write(",");
 
                 if (columnStructure.getNullable() == ResultSetMetaData.columnNoNulls) {
-                    writer.write("›");
+                    writer.write("â—‹");
                 } else if (columnStructure.getNullable() == ResultSetMetaData.columnNullableUnknown) {
-                    writer.write("H");
+                    writer.write("ï¼Ÿ");
                 }
 
                 writer.write(",");
@@ -83,7 +83,7 @@ class WriteCsvForMetaInfoAll {
                         }
                     }
                     if (isPrimaryKey) {
-                        writer.write("›");
+                        writer.write("â—‹");
                     }
                 }
 
@@ -101,7 +101,7 @@ class WriteCsvForMetaInfoAll {
                         }
                     }
                     if (isExportedKey) {
-                        // ‚±‚ÌƒL[‚ğQÆ‚µ‚Ä‚¢‚éƒL[‚ÌƒŠƒXƒg‚É‚Â‚¢‚Ä‚ÍAcrossReferenceKeys‚©‚çæ“¾‚µ‚Ü‚·B
+                        // ã“ã®ã‚­ãƒ¼ã‚’å‚ç…§ã—ã¦ã„ã‚‹ã‚­ãƒ¼ã®ãƒªã‚¹ãƒˆã«ã¤ã„ã¦ã¯ã€crossReferenceKeysã‹ã‚‰å–å¾—ã—ã¾ã™ã€‚
                         final List<BlancoDbMetaDataKeyStructure> listForeignKey = tableStructure
                                 .getCrossReferenceKeys();
                         for (int indexKey = 0; indexKey < listForeignKey.size(); indexKey++) {

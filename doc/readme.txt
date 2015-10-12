@@ -1,33 +1,33 @@
-blancoDbMetaData �� �f�[�^�x�[�X�̃��^�����擾���邽�߂̃c�[���ł��B
-blancoDb �v���_�N�g�̒������ɂȂ��T�u�v���W�F�N�g�ł�����܂��B
+blancoDbMetaData は データベースのメタ情報を取得するためのツールです。
+blancoDb プロダクトの中枢をになうサブプロジェクトでもあります。
 
-[�d�l]
- 1.�w�肳�ꂽ�f�[�^�x�[�X���̃e�[�u���ꗗ��e�[�u���̗񖼁A�^���Ȃǂ� JDBC �h���C�o���o�R���Ď擾�ł��܂��B
- 2.�擾���ꂽ���^���̓o�����[�I�u�W�F�N�g�Ɋi�[������CSV�t�@�C���ɏo�͂��邱�Ƃ��ł��܂��B
+[仕様]
+ 1.指定されたデータベース内のテーブル一覧やテーブルの列名、型情報などを JDBC ドライバを経由して取得できます。
+ 2.取得されたメタ情報はバリューオブジェクトに格納したりCSVファイルに出力することができます。
 
-[���p��̃|�C���g]
- 1.SQL Server 2000�ɐڑ�����ۂɂ́ASQL Server 2005��JDBC�h���C�o�𗘗p���邱�Ƃ𐄏����܂��B
+[利用上のポイント]
+ 1.SQL Server 2000に接続する際には、SQL Server 2005のJDBCドライバを利用することを推奨します。
 
-[�J����]
- 1.�ɉ�q�� (Tosiki Iga / �����҂��): �J������шێ������e�S��
- 2.�R�{�k�i (ymoto) : �d�l���肨��у����[�X����S��
+[開発者]
+ 1.伊賀敏樹 (Tosiki Iga / いがぴょん): 開発および維持メンテ担当
+ 2.山本耕司 (ymoto) : 仕様決定およびリリース判定担当
 
-[���C�Z���X]
- 1.blancoDbMetaData �� ���C�Z���X �Ƃ��� GNU Lesser General Public License ���̗p���Ă��܂��B
+[ライセンス]
+ 1.blancoDbMetaData は ライセンス として GNU Lesser General Public License を採用しています。
 
-[�ˑ����郉�C�u����]
-blancoDbMetaData�͉��L�̃��C�u�����𗘗p���Ă��܂��B
-���e�I�[�v���\�[�X�E�v���_�N�g�̒񋟎҂Ɋ��ӂ��܂��B
+[依存するライブラリ]
+blancoDbMetaDataは下記のライブラリを利用しています。
+※各オープンソース・プロダクトの提供者に感謝します。
  1.JExcelApi - Java Excel API - A Java API to read, write and modify Excel spreadsheets
      http://jexcelapi.sourceforge.net/
      http://sourceforge.net/projects/jexcelapi/
      http://www.andykhan.com/jexcelapi/ 
-   �T�v: Java����Excel�u�b�N�`����ǂݏ������邽�߂̃��C�u�����ł��B
-   ���C�Z���X: GNU Lesser General Public License
+   概要: JavaからExcelブック形式を読み書きするためのライブラリです。
+   ライセンス: GNU Lesser General Public License
  2.blancoCg
-   �T�v: �\�[�X�R�[�h�������C�u����
-   ���C�Z���X: GNU Lesser General Public License
- 3.���̑��� blanco Framework
-   �T�v: ���̃v���_�N�g�� ���ꎩ�g�� blanco Framework�ɂ�莩����������Ă��܂��B
-         ���̃v���_�N�g�� ���s���� blanco Framework�e��v���_�N�g�Ɉˑ����ē��삵�܂��B
-   ���C�Z���X: GNU Lesser General Public License
+   概要: ソースコード生成ライブラリ
+   ライセンス: GNU Lesser General Public License
+ 3.その他の blanco Framework
+   概要: このプロダクトは それ自身が blanco Frameworkにより自動生成されています。
+         このプロダクトは 実行時に blanco Framework各種プロダクトに依存して動作します。
+   ライセンス: GNU Lesser General Public License

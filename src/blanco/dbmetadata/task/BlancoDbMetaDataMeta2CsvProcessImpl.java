@@ -26,7 +26,7 @@ public class BlancoDbMetaDataMeta2CsvProcessImpl implements
                 + BlancoDbMetaDataConstants.VERSION + ")");
 
         try {
-            // ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğì¬B
+            // ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ä½œæˆã€‚
             final File fileTempDirectory = new File(input.getTmpdir()
                     + BlancoDbMetaDataConstants.TARGET_SUBDIRECTORY);
             fileTempDirectory.mkdirs();
@@ -34,7 +34,7 @@ public class BlancoDbMetaDataMeta2CsvProcessImpl implements
             final File fileTargetDirectory = new File(input.getTargetdir());
             fileTargetDirectory.mkdirs();
 
-            // w’è‚³‚ê‚½ƒƒ^ƒfƒBƒŒƒNƒgƒŠ‚ğˆ—‚µ‚Ü‚·B
+            // æŒ‡å®šã•ã‚ŒãŸãƒ¡ã‚¿ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’å‡¦ç†ã—ã¾ã™ã€‚
             new BlancoDbMetaDataMeta2Csv().process(input.getJdbcdriver(), input
                     .getJdbcurl(), input.getJdbcuser(),
                     input.getJdbcpassword(), input.getSchema(), input

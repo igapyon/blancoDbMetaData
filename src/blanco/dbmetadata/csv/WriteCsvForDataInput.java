@@ -24,7 +24,7 @@ import blanco.dbmetadata.valueobject.BlancoDbMetaDataTableStructure;
 
 class WriteCsvForDataInput {
     /**
-     * ƒf[ƒ^“ü—Í—p‚ÌCSVƒtƒ@ƒCƒ‹‚ğì¬‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿å…¥åŠ›ç”¨ã®CSVãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚
      * 
      * @throws IOException
      * 
@@ -71,7 +71,7 @@ class WriteCsvForDataInput {
                 }
                 writer.newLine();
 
-                // åƒL[‚©‚Ç‚¤‚©‚ğ•\¦B
+                // ä¸»ã‚­ãƒ¼ã‹ã©ã†ã‹ã‚’è¡¨ç¤ºã€‚
                 for (int indexColumn = 0; indexColumn < tableStructure
                         .getColumns().size(); indexColumn++) {
                     final BlancoDbMetaDataColumnStructure columnStructure = tableStructure
@@ -92,12 +92,12 @@ class WriteCsvForDataInput {
                         }
                     }
                     if (isPrimaryKey) {
-                        writer.write("åƒL[");
+                        writer.write("ä¸»ã‚­ãƒ¼");
                     }
                 }
                 writer.newLine();
 
-                // ”ñNULL‚©‚Ç‚¤‚©‚ğ•\¦B
+                // éNULLã‹ã©ã†ã‹ã‚’è¡¨ç¤ºã€‚
                 for (int indexColumn = 0; indexColumn < tableStructure
                         .getColumns().size(); indexColumn++) {
                     final BlancoDbMetaDataColumnStructure columnStructure = tableStructure
@@ -108,7 +108,7 @@ class WriteCsvForDataInput {
                     }
 
                     if (columnStructure.getNullable() == ResultSetMetaData.columnNoNulls) {
-                        writer.write("”ñNULL");
+                        writer.write("éNULL");
                     }
                 }
 

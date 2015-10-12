@@ -25,7 +25,7 @@ import blanco.dbmetadata.valueobject.BlancoDbMetaDataTableStructure;
 
 class WriteCsvForMetaInfo {
     /**
-     * ƒf[ƒ^ƒx[ƒXî•ñ—p‚ÌCSVƒtƒ@ƒCƒ‹‚ğì¬‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æƒ…å ±ç”¨ã®CSVãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã™ã€‚
      * 
      * @throws IOException
      * 
@@ -45,7 +45,7 @@ class WriteCsvForMetaInfo {
                 BlancoDbMetaDataMeta2Csv.writeTableInfo(tableStructure, writer);
                 writer.newLine();
 
-                writer.write("—ñ–¼,Œ^(Œ…),”ñNULL,åƒL[,”íQÆ,QÆ,ƒfƒtƒHƒ‹ƒg,”õl");
+                writer.write("åˆ—å,å‹(æ¡),éNULL,ä¸»ã‚­ãƒ¼,è¢«å‚ç…§,å‚ç…§,ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ,å‚™è€ƒ");
                 writer.newLine();
 
                 for (int indexColumn = 0; indexColumn < tableStructure
@@ -61,9 +61,9 @@ class WriteCsvForMetaInfo {
                     writer.write(",");
 
                     if (columnStructure.getNullable() == ResultSetMetaData.columnNoNulls) {
-                        writer.write("›");
+                        writer.write("â—‹");
                     } else if (columnStructure.getNullable() == ResultSetMetaData.columnNullableUnknown) {
-                        writer.write("H");
+                        writer.write("ï¼Ÿ");
                     }
 
                     writer.write(",");
@@ -80,7 +80,7 @@ class WriteCsvForMetaInfo {
                             }
                         }
                         if (isPrimaryKey) {
-                            writer.write("›");
+                            writer.write("â—‹");
                         }
                     }
 
@@ -98,7 +98,7 @@ class WriteCsvForMetaInfo {
                             }
                         }
                         if (isExportedKey) {
-                            // ‚±‚ÌƒL[‚ğQÆ‚µ‚Ä‚¢‚éƒL[‚ÌƒŠƒXƒg‚É‚Â‚¢‚Ä‚ÍAcrossReferenceKeys‚©‚çæ“¾‚µ‚Ü‚·B
+                            // ã“ã®ã‚­ãƒ¼ã‚’å‚ç…§ã—ã¦ã„ã‚‹ã‚­ãƒ¼ã®ãƒªã‚¹ãƒˆã«ã¤ã„ã¦ã¯ã€crossReferenceKeysã‹ã‚‰å–å¾—ã—ã¾ã™ã€‚
                             final List<BlancoDbMetaDataKeyStructure> listForeignKey = tableStructure
                                     .getCrossReferenceKeys();
                             for (int indexKey = 0; indexKey < listForeignKey

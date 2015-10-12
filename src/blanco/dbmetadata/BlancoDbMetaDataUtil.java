@@ -21,32 +21,32 @@ import java.util.Properties;
 import blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure;
 
 /**
- * ƒf[ƒ^ƒx[ƒX‚©‚çƒƒ^î•ñ‚ğæ“¾‚·‚éƒ†[ƒeƒBƒŠƒeƒBB
+ * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‹ã‚‰ãƒ¡ã‚¿æƒ…å ±ã‚’å–å¾—ã™ã‚‹ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã€‚
  * 
- * Šî–{“I‚Èƒƒ\ƒbƒh‚ªŠÜ‚Ü‚ê‚Ü‚·B
+ * åŸºæœ¬çš„ãªãƒ¡ã‚½ãƒƒãƒ‰ãŒå«ã¾ã‚Œã¾ã™ã€‚
  * 
  * @author IGA Tosiki
  */
 public class BlancoDbMetaDataUtil {
     /**
-     * w’è‚³‚ê‚½î•ñ‚ğ‚à‚Æ‚Éƒf[ƒ^ƒx[ƒX‚ÉÚ‘±‚µ‚Ü‚·B
+     * æŒ‡å®šã•ã‚ŒãŸæƒ…å ±ã‚’ã‚‚ã¨ã«ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«æ¥ç¶šã—ã¾ã™ã€‚
      * 
-     * DriverManager ‚Í—˜—p‚¹‚¸‚ÉA“Æ©•û®‚Åƒf[ƒ^ƒx[ƒXÚ‘±‚ğÀŒ»‚µ‚Ü‚·B
-     * ‚±‚ê‚ÍƒNƒ‰ƒXƒ[ƒ_[‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ªˆÙ‚È‚éê‡‚Å‚à“KØ‚É“®ì‚³‚¹‚é‚½‚ß‚Ì‘Îˆ‚Å‚·B
+     * DriverManager ã¯åˆ©ç”¨ã›ãšã«ã€ç‹¬è‡ªæ–¹å¼ã§ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶šã‚’å®Ÿç¾ã—ã¾ã™ã€‚
+     * ã“ã‚Œã¯ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ãƒ¼ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒç•°ãªã‚‹å ´åˆã§ã‚‚é©åˆ‡ã«å‹•ä½œã•ã›ã‚‹ãŸã‚ã®å¯¾å‡¦ã§ã™ã€‚
      * 
      * @param argJdbcDriverClassName
-     *            JDBCƒhƒ‰ƒCƒoEƒNƒ‰ƒX–¼B
+     *            JDBCãƒ‰ãƒ©ã‚¤ãƒãƒ»ã‚¯ãƒ©ã‚¹åã€‚
      * @param argJdbcUrl
-     *            JDBCÚ‘±æURLB
+     *            JDBCæ¥ç¶šå…ˆURLã€‚
      * @param argJdbcUser
-     *            JDBCÚ‘±ƒ†[ƒU–¼B
+     *            JDBCæ¥ç¶šãƒ¦ãƒ¼ã‚¶åã€‚
      * @param argJdbcPassword
-     *            JDBCÚ‘±ƒpƒXƒ[ƒhB
-     * @return ƒf[ƒ^ƒx[ƒXÚ‘±B
+     *            JDBCæ¥ç¶šãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã€‚
+     * @return ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶šã€‚
      * @throws ClassNotFoundException
-     *             ƒNƒ‰ƒX‚ªŒ©‚Â‚©‚ç‚È‚©‚Á‚½ê‡B
+     *             ã‚¯ãƒ©ã‚¹ãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸå ´åˆã€‚
      * @throws IllegalArgumentException
-     *             Ú‘±‚É—áŠO‚ª”­¶‚µ‚½ê‡B
+     *             æ¥ç¶šæ™‚ã«ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸå ´åˆã€‚
      */
     public static Connection connect(final String argJdbcDriverClassName,
             final String argJdbcUrl, final String argJdbcUser,
@@ -56,26 +56,26 @@ public class BlancoDbMetaDataUtil {
     }
 
     /**
-     * w’è‚³‚ê‚½î•ñ‚ğ‚à‚Æ‚Éƒf[ƒ^ƒx[ƒX‚ÉÚ‘±‚µ‚Ü‚·B
+     * æŒ‡å®šã•ã‚ŒãŸæƒ…å ±ã‚’ã‚‚ã¨ã«ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«æ¥ç¶šã—ã¾ã™ã€‚
      * 
-     * DriverManager ‚Í—˜—p‚¹‚¸‚ÉA“Æ©•û®‚Åƒf[ƒ^ƒx[ƒXÚ‘±‚ğÀŒ»‚µ‚Ü‚·B
-     * ‚±‚ê‚ÍƒNƒ‰ƒXƒ[ƒ_[‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ªˆÙ‚È‚éê‡‚Å‚à“KØ‚É“®ì‚³‚¹‚é‚½‚ß‚Ì‘Îˆ‚Å‚·B
+     * DriverManager ã¯åˆ©ç”¨ã›ãšã«ã€ç‹¬è‡ªæ–¹å¼ã§ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶šã‚’å®Ÿç¾ã—ã¾ã™ã€‚
+     * ã“ã‚Œã¯ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ãƒ¼ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒç•°ãªã‚‹å ´åˆã§ã‚‚é©åˆ‡ã«å‹•ä½œã•ã›ã‚‹ãŸã‚ã®å¯¾å‡¦ã§ã™ã€‚
      * 
      * @param argJdbcDriverClassName
-     *            JDBCƒhƒ‰ƒCƒoEƒNƒ‰ƒX–¼B
+     *            JDBCãƒ‰ãƒ©ã‚¤ãƒãƒ»ã‚¯ãƒ©ã‚¹åã€‚
      * @param argJdbcUrl
-     *            JDBCÚ‘±æURLB
+     *            JDBCæ¥ç¶šå…ˆURLã€‚
      * @param argJdbcUser
-     *            JDBCÚ‘±ƒ†[ƒU–¼B
+     *            JDBCæ¥ç¶šãƒ¦ãƒ¼ã‚¶åã€‚
      * @param argJdbcPassword
-     *            JDBCÚ‘±ƒpƒXƒ[ƒhB
+     *            JDBCæ¥ç¶šãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã€‚
      * @param loader
-     *            ƒNƒ‰ƒXƒ[ƒ_[B
-     * @return ƒf[ƒ^ƒx[ƒXÚ‘±B
+     *            ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ãƒ¼ã€‚
+     * @return ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶šã€‚
      * @throws ClassNotFoundException
-     *             ƒNƒ‰ƒX‚ªŒ©‚Â‚©‚ç‚È‚©‚Á‚½ê‡B
+     *             ã‚¯ãƒ©ã‚¹ãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸå ´åˆã€‚
      * @throws IllegalArgumentException
-     *             Ú‘±‚É—áŠO‚ª”­¶‚µ‚½ê‡B
+     *             æ¥ç¶šæ™‚ã«ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸå ´åˆã€‚
      */
     @SuppressWarnings( { "unchecked" })
     public static Connection connect(final String argJdbcDriverClassName,
@@ -88,32 +88,32 @@ public class BlancoDbMetaDataUtil {
         try {
             driverClass = loader.loadClass(argJdbcDriverClassName);
         } catch (ClassNotFoundException ex) {
-            throw new ClassNotFoundException("ƒf[ƒ^ƒx[ƒXÚ‘±: JDBCƒhƒ‰ƒCƒoƒNƒ‰ƒX["
-                    + argJdbcDriverClassName + "]ƒ[ƒh‚É¸”s‚µ‚Ü‚µ‚½: " + ex.toString(),
+            throw new ClassNotFoundException("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š: JDBCãƒ‰ãƒ©ã‚¤ãƒã‚¯ãƒ©ã‚¹["
+                    + argJdbcDriverClassName + "]ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã—ã¾ã—ãŸ: " + ex.toString(),
                     ex);
         }
 
         try {
             driver = (Driver) driverClass.newInstance();
         } catch (InstantiationException e) {
-            throw new IllegalArgumentException("ƒf[ƒ^ƒx[ƒXÚ‘±: JDBCƒhƒ‰ƒCƒoƒNƒ‰ƒX["
-                    + argJdbcDriverClassName + "]‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»‚É¸”s‚µ‚Ü‚µ‚½: "
+            throw new IllegalArgumentException("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š: JDBCãƒ‰ãƒ©ã‚¤ãƒã‚¯ãƒ©ã‚¹["
+                    + argJdbcDriverClassName + "]ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã«å¤±æ•—ã—ã¾ã—ãŸ: "
                     + e.toString());
         } catch (IllegalAccessException e) {
-            throw new IllegalArgumentException("ƒf[ƒ^ƒx[ƒXÚ‘±: JDBCƒhƒ‰ƒCƒoƒNƒ‰ƒX["
-                    + argJdbcDriverClassName + "]‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‰»‚ÌÛ‚ÉƒAƒNƒZƒXˆá”½‚ª”­¶‚µ‚Ü‚µ‚½: "
+            throw new IllegalArgumentException("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š: JDBCãƒ‰ãƒ©ã‚¤ãƒã‚¯ãƒ©ã‚¹["
+                    + argJdbcDriverClassName + "]ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã®éš›ã«ã‚¢ã‚¯ã‚»ã‚¹é•åãŒç™ºç”Ÿã—ã¾ã—ãŸ: "
                     + e.toString());
         }
 
         try {
-            // DriverManager‚ğg—p‚¹‚¸ADriver‚Ìconnect()ƒƒ\ƒbƒh‚ğ’¼ÚŒÄ‚Ño‚µ‚Ü‚·B
-            // ‚±‚ê‚É‚æ‚èAƒNƒ‰ƒXƒ[ƒ_[‚ª•Ê‚Å‚à“®ì‚µ‚Ü‚·B
+            // DriverManagerã‚’ä½¿ç”¨ã›ãšã€Driverã®connect()ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ç›´æ¥å‘¼ã³å‡ºã—ã¾ã™ã€‚
+            // ã“ã‚Œã«ã‚ˆã‚Šã€ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ãƒ¼ãŒåˆ¥ã§ã‚‚å‹•ä½œã—ã¾ã™ã€‚
             final Properties info = new Properties();
             info.put("user", argJdbcUser);
             info.put("password", argJdbcPassword);
             conn = driver.connect(argJdbcUrl, info);
         } catch (SQLException ex) {
-            throw new IllegalArgumentException("ƒf[ƒ^ƒx[ƒXÚ‘±: JDBCÚ‘±‚É¸”s‚µ‚Ü‚µ‚½: "
+            throw new IllegalArgumentException("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š: JDBCæ¥ç¶šã«å¤±æ•—ã—ã¾ã—ãŸ: "
                     + ex.toString());
         }
 
@@ -121,17 +121,17 @@ public class BlancoDbMetaDataUtil {
     }
 
     /**
-     * w’è‚³‚ê‚½ URI ˆê——‚©‚ç JDBC ƒhƒ‰ƒCƒo[EƒNƒ‰ƒX‚ğƒ[ƒh‚µ‚½ƒNƒ‰ƒXƒ[ƒ_[‚ğì¬‚µ‚Ü‚·B
+     * æŒ‡å®šã•ã‚ŒãŸ URI ä¸€è¦§ã‹ã‚‰ JDBC ãƒ‰ãƒ©ã‚¤ãƒãƒ¼ãƒ»ã‚¯ãƒ©ã‚¹ã‚’ãƒ­ãƒ¼ãƒ‰ã—ãŸã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ãƒ¼ã‚’ä½œæˆã—ã¾ã™ã€‚
      * 
-     * ƒR[ƒh—á: urlArray[0] = jarFile.toURL();
+     * ã‚³ãƒ¼ãƒ‰ä¾‹: urlArray[0] = jarFile.toURL();
      * 
      * @param urlArray
-     *            “Ç‚İ‚İ‚à‚Æ URI ˆê——B
+     *            èª­ã¿è¾¼ã¿ã‚‚ã¨ URI ä¸€è¦§ã€‚
      * @param argJdbcDriverClassName
-     *            ƒhƒ‰ƒCƒoƒNƒ‰ƒX–¼B
-     * @return ƒNƒ‰ƒXƒ[ƒ_[‚ÌƒCƒ“ƒXƒ^ƒ“ƒXB
+     *            ãƒ‰ãƒ©ã‚¤ãƒã‚¯ãƒ©ã‚¹åã€‚
+     * @return ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ãƒ¼ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã€‚
      * @throws ClassNotFoundException
-     *             ƒNƒ‰ƒX‚ªŒ©‚Â‚©‚ç‚È‚©‚Á‚½ê‡B
+     *             ã‚¯ãƒ©ã‚¹ãŒè¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸå ´åˆã€‚
      */
     public static final ClassLoader loadDriverClass(final URL[] urlArray,
             final String argJdbcDriverClassName) throws ClassNotFoundException {
@@ -142,20 +142,20 @@ public class BlancoDbMetaDataUtil {
 
             return loader;
         } catch (ClassNotFoundException e) {
-            throw new ClassNotFoundException("ƒf[ƒ^ƒx[ƒXÚ‘±: JDBCƒhƒ‰ƒCƒoƒNƒ‰ƒX["
-                    + argJdbcDriverClassName + "]‚ÌƒNƒ‰ƒXƒ[ƒh‚É¸”s‚µ‚Ü‚µ‚½: "
+            throw new ClassNotFoundException("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š: JDBCãƒ‰ãƒ©ã‚¤ãƒã‚¯ãƒ©ã‚¹["
+                    + argJdbcDriverClassName + "]ã®ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ‰ã«å¤±æ•—ã—ã¾ã—ãŸ: "
                     + e.toString());
         }
     }
 
     /**
-     * JDBCƒf[ƒ^ƒ^ƒCƒv‚ğJava‚Ì•¶š—ñ‚É“Ç‚İ‘Ö‚¦‚Ü‚·B
+     * JDBCãƒ‡ãƒ¼ã‚¿ã‚¿ã‚¤ãƒ—ã‚’Javaã®æ–‡å­—åˆ—ã«èª­ã¿æ›¿ãˆã¾ã™ã€‚
      * 
-     * [java.sql.Types.]‚ğ‘O•û‚É•t—^‚·‚é‚ÆJava JDBC‚Ì’è”‚É‚È‚è‚Ü‚·B
+     * [java.sql.Types.]ã‚’å‰æ–¹ã«ä»˜ä¸ã™ã‚‹ã¨Java JDBCã®å®šæ•°ã«ãªã‚Šã¾ã™ã€‚
      * 
      * @param argJdbcDataType
-     *            JDBCã‚Ìƒf[ƒ^Œ^B
-     * @return Javaã‚Ì•¶š—ñB
+     *            JDBCä¸Šã®ãƒ‡ãƒ¼ã‚¿å‹ã€‚
+     * @return Javaä¸Šã®æ–‡å­—åˆ—ã€‚
      */
     public final static String convertJdbcDataTypeToString(
             final int argJdbcDataType) {
@@ -229,17 +229,17 @@ public class BlancoDbMetaDataUtil {
         case Types.ROWID:
             return "ROWID";
         default:
-            // ‡’v‚µ‚È‚©‚Á‚½ê‡‚É‚Í ‹ó”’‚ğ–ß‚µ‚Ü‚·B
+            // åˆè‡´ã—ãªã‹ã£ãŸå ´åˆã«ã¯ ç©ºç™½ã‚’æˆ»ã—ã¾ã™ã€‚
             return "";
         }
     }
 
     /**
-     * JDBCƒf[ƒ^ƒ^ƒCƒv•¶š—ñ‚ğJava‚ÌTypes‚É“Ç‚İ‘Ö‚¦‚Ü‚·B
+     * JDBCãƒ‡ãƒ¼ã‚¿ã‚¿ã‚¤ãƒ—æ–‡å­—åˆ—ã‚’Javaã®Typesã«èª­ã¿æ›¿ãˆã¾ã™ã€‚
      * 
      * @param argJdbcDataType
-     *            [java.sql.Types.]‚ğ‘O•û‚É•t—^‚·‚é‚ÆJava JDBC‚Ì’è”‚É‚È‚é’lB
-     * @return java.sql.Types‚Ì’lBƒqƒbƒg‚µ‚È‚©‚Á‚½ê‡‚É‚Í Integer.MIN_VALUEB
+     *            [java.sql.Types.]ã‚’å‰æ–¹ã«ä»˜ä¸ã™ã‚‹ã¨Java JDBCã®å®šæ•°ã«ãªã‚‹å€¤ã€‚
+     * @return java.sql.Typesã®å€¤ã€‚ãƒ’ãƒƒãƒˆã—ãªã‹ã£ãŸå ´åˆã«ã¯ Integer.MIN_VALUEã€‚
      */
     public final static int convertJdbcDataType2Int(final String argJdbcDataType) {
         if (argJdbcDataType.equals("BIT")) {
@@ -345,18 +345,18 @@ public class BlancoDbMetaDataUtil {
             return Types.BOOLEAN;
         }
 
-        // Šm’è‚µ‚È‚©‚Á‚½ê‡B
+        // ç¢ºå®šã—ãªã‹ã£ãŸå ´åˆã€‚
         return Integer.MIN_VALUE;
     }
 
     /**
-     * JDBC ‚Ì nullable‚ğJava‚Ì•¶š—ñ‚É“Ç‚İ‘Ö‚¦‚Ü‚·B
+     * JDBC ã® nullableã‚’Javaã®æ–‡å­—åˆ—ã«èª­ã¿æ›¿ãˆã¾ã™ã€‚
      * 
-     * [java.sql.ResultSetMetaData.]‚ğ‘O•û‚É•t—^‚·‚é‚ÆJava JDBC‚Ì’è”‚É‚È‚è‚Ü‚·B
+     * [java.sql.ResultSetMetaData.]ã‚’å‰æ–¹ã«ä»˜ä¸ã™ã‚‹ã¨Java JDBCã®å®šæ•°ã«ãªã‚Šã¾ã™ã€‚
      * 
      * @param argJdbcDataType
-     *            JDBCã‚Ìƒf[ƒ^Œ^B
-     * @return Java•¶š—ñ–¼ÌB
+     *            JDBCä¸Šã®ãƒ‡ãƒ¼ã‚¿å‹ã€‚
+     * @return Javaæ–‡å­—åˆ—åç§°ã€‚
      */
     public final static String convertJdbcNullableToString(
             final int argJdbcDataType) {
@@ -368,39 +368,39 @@ public class BlancoDbMetaDataUtil {
         case ResultSetMetaData.columnNullableUnknown:
             return "columnNullableUnknown";
         default:
-            // ‡’v‚µ‚È‚©‚Á‚½ê‡‚É‚Í ‹ó”’‚ğ–ß‚µ‚Ü‚·B
+            // åˆè‡´ã—ãªã‹ã£ãŸå ´åˆã«ã¯ ç©ºç™½ã‚’æˆ»ã—ã¾ã™ã€‚
             return "";
         }
     }
 
     /**
-     * ƒf[ƒ^ƒx[ƒXã‚Ìƒ^ƒCƒv–¼‚©‚çƒf[ƒ^ƒ^ƒCƒv‚ğˆø‚«“–‚Ä‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ä¸Šã®ã‚¿ã‚¤ãƒ—åã‹ã‚‰ãƒ‡ãƒ¼ã‚¿ã‚¿ã‚¤ãƒ—ã‚’å¼•ãå½“ã¦ã¾ã™ã€‚
      * 
-     * ORACLE‚É‚¨‚¢‚Ä
-     * TIMESTAMPŒ^‚É‘Î‚µ‚ÄƒTƒCƒYw’è‚ğ‚¨‚±‚È‚Á‚½ê‡‚ÉOTHER‚É‚È‚Á‚Ä‚µ‚Ü‚¢‚Ü‚·B‚»‚ÌÛ‚É–¼Ì‚©‚çƒ^ƒCƒv–¼‚ğˆø‚«“–‚Ä‚éˆ—‚ğ‚¨‚±‚È‚¢‚Ü‚·B
+     * ORACLEã«ãŠã„ã¦
+     * TIMESTAMPå‹ã«å¯¾ã—ã¦ã‚µã‚¤ã‚ºæŒ‡å®šã‚’ãŠã“ãªã£ãŸå ´åˆã«OTHERã«ãªã£ã¦ã—ã¾ã„ã¾ã™ã€‚ãã®éš›ã«åç§°ã‹ã‚‰ã‚¿ã‚¤ãƒ—åã‚’å¼•ãå½“ã¦ã‚‹å‡¦ç†ã‚’ãŠã“ãªã„ã¾ã™ã€‚
      * 
-     * OTHER ‚â •s’è ‚Ìê‡‚É‚Ì‚İA‚±‚Ìˆ—‚ğÀ{‚·‚é‚æ‚¤‚É‚µ‚Ä‚­‚¾‚³‚¢B
+     * OTHER ã‚„ ä¸å®š ã®å ´åˆã«ã®ã¿ã€ã“ã®å‡¦ç†ã‚’å®Ÿæ–½ã™ã‚‹ã‚ˆã†ã«ã—ã¦ãã ã•ã„ã€‚
      * 
      * @param columnStructure
-     *            —ñ\‘¢B
-     * @return true‚È‚çˆø‚«“–‚Ä‚ÌŒ‹‰ÊXV‚³‚ê‚½B false‚È‚ç‰½‚àÀ{‚³‚ê‚Ä‚¢‚È‚¢B
+     *            åˆ—æ§‹é€ ã€‚
+     * @return trueãªã‚‰å¼•ãå½“ã¦ã®çµæœæ›´æ–°ã•ã‚ŒãŸã€‚ falseãªã‚‰ä½•ã‚‚å®Ÿæ–½ã•ã‚Œã¦ã„ãªã„ã€‚
      */
     public static final boolean mapTypeName2DataType(
             final BlancoDbMetaDataColumnStructure columnStructure) {
 
-        // ƒf[ƒ^ƒx[ƒXã‚ÌŒ^–¼‚ğæ“¾‚µ‚Ü‚·B
+        // ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ä¸Šã®å‹åã‚’å–å¾—ã—ã¾ã™ã€‚
         String wrkTypeName = columnStructure.getTypeName().toUpperCase();
 
-        // ()‚É‚æ‚éƒTƒCƒYw’è‚ğØ‚èæ‚è‚Ü‚·B
+        // ()ã«ã‚ˆã‚‹ã‚µã‚¤ã‚ºæŒ‡å®šã‚’åˆ‡ã‚Šå–ã‚Šã¾ã™ã€‚
         int indexOfTrim = wrkTypeName.indexOf('(');
         if (indexOfTrim > 0) {
             wrkTypeName = wrkTypeName.substring(0, indexOfTrim);
         }
 
-        // JDBCƒ^ƒCƒv–¼‚Ì•¶š—ñ‚ğg‚Á‚ÄAŒ^–¼ˆø‚«“–‚Ä‚ğÀ{‚µ‚Ü‚·B
+        // JDBCã‚¿ã‚¤ãƒ—åã®æ–‡å­—åˆ—ã‚’ä½¿ã£ã¦ã€å‹åå¼•ãå½“ã¦ã‚’å®Ÿæ–½ã—ã¾ã™ã€‚
         final int jdbcDataType = convertJdbcDataType2Int(wrkTypeName);
         if (jdbcDataType != Integer.MIN_VALUE) {
-            // “±o‚³‚ê‚½ƒf[ƒ^ƒ^ƒCƒv‚ğ³‚Æ‚µ‚Äˆµ‚¢‚Ü‚·B
+            // å°å‡ºã•ã‚ŒãŸãƒ‡ãƒ¼ã‚¿ã‚¿ã‚¤ãƒ—ã‚’æ­£ã¨ã—ã¦æ‰±ã„ã¾ã™ã€‚
             columnStructure.setDataType(jdbcDataType);
             return true;
         }

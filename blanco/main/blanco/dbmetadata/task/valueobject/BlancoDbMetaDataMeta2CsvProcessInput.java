@@ -1,285 +1,285 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
  */
 package blanco.dbmetadata.task.valueobject;
 
 /**
- * ˆ—ƒNƒ‰ƒX [BlancoDbMetaDataMeta2CsvProcess]‚Ì“ü—ÍƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒgƒNƒ‰ƒX‚Å‚·B
+ * å‡¦ç†ã‚¯ãƒ©ã‚¹ [BlancoDbMetaDataMeta2CsvProcess]ã®å…¥åŠ›ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚¯ãƒ©ã‚¹ã§ã™ã€‚
  */
 public class BlancoDbMetaDataMeta2CsvProcessInput {
     /**
-     * verboseƒ‚[ƒh‚Å“®ì‚³‚¹‚é‚©‚Ç‚¤‚©B
+     * verboseãƒ¢ãƒ¼ãƒ‰ã§å‹•ä½œã•ã›ã‚‹ã‹ã©ã†ã‹ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [verbose]B
-     * ƒfƒtƒHƒ‹ƒg: [false]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [verbose]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [false]ã€‚
      */
     private boolean fVerbose = false;
 
     /**
-     * JDBCƒhƒ‰ƒCƒo–¼‚ğw’è‚µ‚Ü‚·B
+     * JDBCãƒ‰ãƒ©ã‚¤ãƒåã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [jdbcdriver]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [jdbcdriver]ã€‚
      */
     private String fJdbcdriver;
 
     /**
-     * JDBCÚ‘±æURL‚ğw’è‚µ‚Ü‚·B
+     * JDBCæ¥ç¶šå…ˆURLã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [jdbcurl]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [jdbcurl]ã€‚
      */
     private String fJdbcurl;
 
     /**
-     * ƒtƒB[ƒ‹ƒh: [jdbcuser]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [jdbcuser]ã€‚
      */
     private String fJdbcuser;
 
     /**
-     * ƒtƒB[ƒ‹ƒh: [jdbcpassword]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [jdbcpassword]ã€‚
      */
     private String fJdbcpassword;
 
     /**
-     * ƒXƒL[ƒ}î•ñBOracle‚Ìê‡‚É‚Íƒ†[ƒU–¼‚ğ—^‚¦‚é•K—v‚ª‚ ‚è‚Ü‚·B
+     * ã‚¹ã‚­ãƒ¼ãƒæƒ…å ±ã€‚Oracleã®å ´åˆã«ã¯ãƒ¦ãƒ¼ã‚¶åã‚’ä¸ãˆã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [schema]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [schema]ã€‚
      */
     private String fSchema;
 
     /**
-     * w’è‚³‚ê‚½ê‡‚É‚ÍA‚»‚Ì•\‚Ì‚İ‚ğˆ—‚µ‚Ü‚·B
+     * æŒ‡å®šã•ã‚ŒãŸå ´åˆã«ã¯ã€ãã®è¡¨ã®ã¿ã‚’å‡¦ç†ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [table]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [table]ã€‚
      */
     private String fTable;
 
     /**
-     * o—ÍæƒtƒHƒ‹ƒ_‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìblanco‚ğ—p‚¢‚Ü‚·B
+     * å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®blancoã‚’ç”¨ã„ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [targetdir]B
-     * ƒfƒtƒHƒ‹ƒg: [blanco.db]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [targetdir]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [blanco.db]ã€‚
      */
     private String fTargetdir = "blanco.db";
 
     /**
-     * ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìtmp‚ğ—p‚¢‚Ü‚·B
+     * ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®tmpã‚’ç”¨ã„ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [tmpdir]B
-     * ƒfƒtƒHƒ‹ƒg: [tmp]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [tmpdir]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [tmp]ã€‚
      */
     private String fTmpdir = "tmp";
 
     /**
-     * ƒtƒB[ƒ‹ƒh [verbose] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [verbose] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [verboseƒ‚[ƒh‚Å“®ì‚³‚¹‚é‚©‚Ç‚¤‚©B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [verboseãƒ¢ãƒ¼ãƒ‰ã§å‹•ä½œã•ã›ã‚‹ã‹ã©ã†ã‹ã€‚]ã€‚
      *
-     * @param argVerbose ƒtƒB[ƒ‹ƒh[verbose]‚Éİ’è‚·‚é’lB
+     * @param argVerbose ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[verbose]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setVerbose(final boolean argVerbose) {
         fVerbose = argVerbose;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [verbose] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [verbose] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [verboseƒ‚[ƒh‚Å“®ì‚³‚¹‚é‚©‚Ç‚¤‚©B]B
-     * ƒfƒtƒHƒ‹ƒg: [false]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [verboseãƒ¢ãƒ¼ãƒ‰ã§å‹•ä½œã•ã›ã‚‹ã‹ã©ã†ã‹ã€‚]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [false]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[verbose]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[verbose]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public boolean getVerbose() {
         return fVerbose;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [jdbcdriver] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [jdbcdriver] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [JDBCƒhƒ‰ƒCƒo–¼‚ğw’è‚µ‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [JDBCãƒ‰ãƒ©ã‚¤ãƒåã‚’æŒ‡å®šã—ã¾ã™ã€‚]ã€‚
      *
-     * @param argJdbcdriver ƒtƒB[ƒ‹ƒh[jdbcdriver]‚Éİ’è‚·‚é’lB
+     * @param argJdbcdriver ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[jdbcdriver]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setJdbcdriver(final String argJdbcdriver) {
         fJdbcdriver = argJdbcdriver;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [jdbcdriver] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [jdbcdriver] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [JDBCƒhƒ‰ƒCƒo–¼‚ğw’è‚µ‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [JDBCãƒ‰ãƒ©ã‚¤ãƒåã‚’æŒ‡å®šã—ã¾ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[jdbcdriver]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[jdbcdriver]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getJdbcdriver() {
         return fJdbcdriver;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [jdbcurl] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [jdbcurl] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [JDBCÚ‘±æURL‚ğw’è‚µ‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [JDBCæ¥ç¶šå…ˆURLã‚’æŒ‡å®šã—ã¾ã™ã€‚]ã€‚
      *
-     * @param argJdbcurl ƒtƒB[ƒ‹ƒh[jdbcurl]‚Éİ’è‚·‚é’lB
+     * @param argJdbcurl ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[jdbcurl]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setJdbcurl(final String argJdbcurl) {
         fJdbcurl = argJdbcurl;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [jdbcurl] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [jdbcurl] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [JDBCÚ‘±æURL‚ğw’è‚µ‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [JDBCæ¥ç¶šå…ˆURLã‚’æŒ‡å®šã—ã¾ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[jdbcurl]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[jdbcurl]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getJdbcurl() {
         return fJdbcurl;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [jdbcuser] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [jdbcuser] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: []B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: []ã€‚
      *
-     * @param argJdbcuser ƒtƒB[ƒ‹ƒh[jdbcuser]‚Éİ’è‚·‚é’lB
+     * @param argJdbcuser ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[jdbcuser]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setJdbcuser(final String argJdbcuser) {
         fJdbcuser = argJdbcuser;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [jdbcuser] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [jdbcuser] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: []B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: []ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[jdbcuser]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[jdbcuser]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getJdbcuser() {
         return fJdbcuser;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [jdbcpassword] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [jdbcpassword] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: []B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: []ã€‚
      *
-     * @param argJdbcpassword ƒtƒB[ƒ‹ƒh[jdbcpassword]‚Éİ’è‚·‚é’lB
+     * @param argJdbcpassword ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[jdbcpassword]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setJdbcpassword(final String argJdbcpassword) {
         fJdbcpassword = argJdbcpassword;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [jdbcpassword] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [jdbcpassword] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: []B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: []ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[jdbcpassword]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[jdbcpassword]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getJdbcpassword() {
         return fJdbcpassword;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [schema] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [schema] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒXƒL[ƒ}î•ñBOracle‚Ìê‡‚É‚Íƒ†[ƒU–¼‚ğ—^‚¦‚é•K—v‚ª‚ ‚è‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ã‚¹ã‚­ãƒ¼ãƒæƒ…å ±ã€‚Oracleã®å ´åˆã«ã¯ãƒ¦ãƒ¼ã‚¶åã‚’ä¸ãˆã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚]ã€‚
      *
-     * @param argSchema ƒtƒB[ƒ‹ƒh[schema]‚Éİ’è‚·‚é’lB
+     * @param argSchema ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[schema]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setSchema(final String argSchema) {
         fSchema = argSchema;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [schema] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [schema] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒXƒL[ƒ}î•ñBOracle‚Ìê‡‚É‚Íƒ†[ƒU–¼‚ğ—^‚¦‚é•K—v‚ª‚ ‚è‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ã‚¹ã‚­ãƒ¼ãƒæƒ…å ±ã€‚Oracleã®å ´åˆã«ã¯ãƒ¦ãƒ¼ã‚¶åã‚’ä¸ãˆã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[schema]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[schema]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getSchema() {
         return fSchema;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [table] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [table] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [w’è‚³‚ê‚½ê‡‚É‚ÍA‚»‚Ì•\‚Ì‚İ‚ğˆ—‚µ‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [æŒ‡å®šã•ã‚ŒãŸå ´åˆã«ã¯ã€ãã®è¡¨ã®ã¿ã‚’å‡¦ç†ã—ã¾ã™ã€‚]ã€‚
      *
-     * @param argTable ƒtƒB[ƒ‹ƒh[table]‚Éİ’è‚·‚é’lB
+     * @param argTable ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[table]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setTable(final String argTable) {
         fTable = argTable;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [table] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [table] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [w’è‚³‚ê‚½ê‡‚É‚ÍA‚»‚Ì•\‚Ì‚İ‚ğˆ—‚µ‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [æŒ‡å®šã•ã‚ŒãŸå ´åˆã«ã¯ã€ãã®è¡¨ã®ã¿ã‚’å‡¦ç†ã—ã¾ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[table]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[table]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getTable() {
         return fTable;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [targetdir] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [targetdir] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [o—ÍæƒtƒHƒ‹ƒ_‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìblanco‚ğ—p‚¢‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®blancoã‚’ç”¨ã„ã¾ã™ã€‚]ã€‚
      *
-     * @param argTargetdir ƒtƒB[ƒ‹ƒh[targetdir]‚Éİ’è‚·‚é’lB
+     * @param argTargetdir ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[targetdir]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setTargetdir(final String argTargetdir) {
         fTargetdir = argTargetdir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [targetdir] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [targetdir] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [o—ÍæƒtƒHƒ‹ƒ_‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìblanco‚ğ—p‚¢‚Ü‚·B]B
-     * ƒfƒtƒHƒ‹ƒg: [blanco.db]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å‡ºåŠ›å…ˆãƒ•ã‚©ãƒ«ãƒ€ã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®blancoã‚’ç”¨ã„ã¾ã™ã€‚]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [blanco.db]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[targetdir]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[targetdir]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getTargetdir() {
         return fTargetdir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [tmpdir] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [tmpdir] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìtmp‚ğ—p‚¢‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®tmpã‚’ç”¨ã„ã¾ã™ã€‚]ã€‚
      *
-     * @param argTmpdir ƒtƒB[ƒ‹ƒh[tmpdir]‚Éİ’è‚·‚é’lB
+     * @param argTmpdir ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[tmpdir]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setTmpdir(final String argTmpdir) {
         fTmpdir = argTmpdir;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [tmpdir] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [tmpdir] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒeƒ“ƒ|ƒ‰ƒŠƒfƒBƒŒƒNƒgƒŠ‚ğw’è‚µ‚Ü‚·B–³w’è‚Ìê‡‚É‚ÍƒJƒŒƒ“ƒg’¼‰º‚Ìtmp‚ğ—p‚¢‚Ü‚·B]B
-     * ƒfƒtƒHƒ‹ƒg: [tmp]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ†ãƒ³ãƒãƒ©ãƒªãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æŒ‡å®šã—ã¾ã™ã€‚ç„¡æŒ‡å®šã®å ´åˆã«ã¯ã‚«ãƒ¬ãƒ³ãƒˆç›´ä¸‹ã®tmpã‚’ç”¨ã„ã¾ã™ã€‚]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [tmp]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[tmpdir]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[tmpdir]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getTmpdir() {
         return fTmpdir;
     }
 
     /**
-     * ‚±‚ÌƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»‚ğæ“¾‚µ‚Ü‚·B
+     * ã“ã®ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * <P>g—pã‚Ì’ˆÓ</P>
+     * <P>ä½¿ç”¨ä¸Šã®æ³¨æ„</P>
      * <UL>
-     * <LI>ƒIƒuƒWƒFƒNƒg‚ÌƒVƒƒƒ[”ÍˆÍ‚Ì‚İ•¶š—ñ‰»‚Ìˆ—‘ÎÛ‚Æ‚È‚è‚Ü‚·B
-     * <LI>ƒIƒuƒWƒFƒNƒg‚ªzŠÂQÆ‚µ‚Ä‚¢‚éê‡‚É‚ÍA‚±‚Ìƒƒ\ƒbƒh‚Íg‚í‚È‚¢‚Å‚­‚¾‚³‚¢B
+     * <LI>ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚·ãƒ£ãƒ­ãƒ¼ç¯„å›²ã®ã¿æ–‡å­—åˆ—åŒ–ã®å‡¦ç†å¯¾è±¡ã¨ãªã‚Šã¾ã™ã€‚
+     * <LI>ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå¾ªç’°å‚ç…§ã—ã¦ã„ã‚‹å ´åˆã«ã¯ã€ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã¯ä½¿ã‚ãªã„ã§ãã ã•ã„ã€‚
      * </UL>
      *
-     * @return ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»B
+     * @return ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã€‚
      */
     @Override
     public String toString() {

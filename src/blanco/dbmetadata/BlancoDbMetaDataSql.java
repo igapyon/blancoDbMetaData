@@ -25,41 +25,41 @@ import java.util.List;
 import blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure;
 
 /**
- * ƒf[ƒ^ƒx[ƒX‚ÉSQL‚ğ”­s‚µAƒƒ^î•ñ‚ğæ“¾‚·‚éƒ†[ƒeƒBƒŠƒeƒBB
+ * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«SQLã‚’ç™ºè¡Œã—ã€ãƒ¡ã‚¿æƒ…å ±ã‚’å–å¾—ã™ã‚‹ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã€‚
  * 
  * @author IGA Tosiki
  */
 public class BlancoDbMetaDataSql {
     /**
-     * ƒf[ƒ^ƒx[ƒX‚ÉSQL‚ğ”­s‚µAƒƒ^î•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«SQLã‚’ç™ºè¡Œã—ã€ãƒ¡ã‚¿æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
-     * ŒµŠi‚ÈSQL•¶ƒ`ƒFƒbƒN‚ÍÀs‚³‚ê‚Ü‚¹‚ñB‚ ‚­‚Ü‚Å‚àƒƒ^î•ñæ“¾‚Ì‚İ‚ªÀ{‚³‚ê‚Ü‚·B
+     * å³æ ¼ãªSQLæ–‡ãƒã‚§ãƒƒã‚¯ã¯å®Ÿè¡Œã•ã‚Œã¾ã›ã‚“ã€‚ã‚ãã¾ã§ã‚‚ãƒ¡ã‚¿æƒ…å ±å–å¾—ã®ã¿ãŒå®Ÿæ–½ã•ã‚Œã¾ã™ã€‚
      * 
      * @throws SQLException
-     *             SQL•¶‚É•s”õ‚ª‚ ‚Á‚½ê‡‚È‚Ç‚É”­¶‚µ‚Ü‚·B
+     *             SQLæ–‡ã«ä¸å‚™ãŒã‚ã£ãŸå ´åˆãªã©ã«ç™ºç”Ÿã—ã¾ã™ã€‚
      */
     public static List<BlancoDbMetaDataColumnStructure> getResultSetMetaData(
             final Connection conn, final String argSql) throws SQLException {
-        // SQL Server 2005 ‚Å‚ÍAstmt.executeQuery()
-        // ‚ğÀs‚µ‚È‚¢ê‡‚É‚ÍASQL“ü—Íƒpƒ‰ƒ[ƒ^‚ÌƒZƒbƒg‚·‚ç‚à•s—v‚Å‚µ‚½B
-        // ‚»‚µ‚ÄAstmt.executeQuery() ‚ğÀs‚µ‚È‚­‚Æ‚àƒƒ^î•ñ‚Íæ“¾‚Å‚«‚Ü‚µ‚½B
+        // SQL Server 2005 ã§ã¯ã€stmt.executeQuery()
+        // ã‚’å®Ÿè¡Œã—ãªã„å ´åˆã«ã¯ã€SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®ã‚»ãƒƒãƒˆã™ã‚‰ã‚‚ä¸è¦ã§ã—ãŸã€‚
+        // ãã—ã¦ã€stmt.executeQuery() ã‚’å®Ÿè¡Œã—ãªãã¨ã‚‚ãƒ¡ã‚¿æƒ…å ±ã¯å–å¾—ã§ãã¾ã—ãŸã€‚
 
         return getResultSetMetaData(conn, argSql, null);
     }
 
     /**
-     * ƒf[ƒ^ƒx[ƒX‚ÉSQL‚ğ”­s‚µAƒƒ^î•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«SQLã‚’ç™ºè¡Œã—ã€ãƒ¡ã‚¿æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
-     * SQL•¶‚ğ”­s‚µ‚ÄŒ‹‰ÊƒZƒbƒg‚ğæ“¾‚µ‚Ü‚·BargSqlInParameter‚É’l‚ªƒZƒbƒg‚³‚ê‚Ä‚¢‚éê‡‚É‚ÍASQL•¶‚Ì‚µ‘Å‚¿‚às‚¢‚Ü‚·B
+     * SQLæ–‡ã‚’ç™ºè¡Œã—ã¦çµæœã‚»ãƒƒãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚argSqlInParameterã«å€¤ãŒã‚»ãƒƒãƒˆã•ã‚Œã¦ã„ã‚‹å ´åˆã«ã¯ã€SQLæ–‡ã®è©¦ã—æ‰“ã¡ã‚‚è¡Œã„ã¾ã™ã€‚
      * 
      * @param conn
-     *            ƒf[ƒ^ƒx[ƒXÚ‘±B
+     *            ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶šã€‚
      * @param argSql
-     *            SQL•¶B
+     *            SQLæ–‡ã€‚
      * @param argSqlInParameter
-     *            SQL“ü—Íƒpƒ‰ƒ[ƒ^Bnull‚ğ—^‚¦‚é‚ÆAŒµŠi‚ÈSQLƒ`ƒFƒbƒN‚ÍƒXƒLƒbƒv‚³‚ê‚½Às‚³‚ê‚Ü‚¹‚ñB
+     *            SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã€‚nullã‚’ä¸ãˆã‚‹ã¨ã€å³æ ¼ãªSQLãƒã‚§ãƒƒã‚¯ã¯ã‚¹ã‚­ãƒƒãƒ—ã•ã‚ŒãŸå®Ÿè¡Œã•ã‚Œã¾ã›ã‚“ã€‚
      * @throws SQLException
-     *             SQL•¶‚É•s”õ‚ª‚ ‚Á‚½ê‡‚È‚Ç‚É”­¶‚µ‚Ü‚·B
+     *             SQLæ–‡ã«ä¸å‚™ãŒã‚ã£ãŸå ´åˆãªã©ã«ç™ºç”Ÿã—ã¾ã™ã€‚
      */
     public static List<BlancoDbMetaDataColumnStructure> getResultSetMetaData(
             final Connection conn, final String argSql,
@@ -72,19 +72,19 @@ public class BlancoDbMetaDataSql {
         ResultSet resultSet = null;
         try {
             if (argSqlInParameter != null) {
-                // System.out.println("SQL•¶‚ÉSQL“ü—Íƒpƒ‰ƒ[ƒ^‚ğƒZƒbƒg‚µ‚½‚¤‚¦‚ÅÀÛ‚ÉÀs‚µ‚Ä‚İ‚Ü‚·:["
+                // System.out.println("SQLæ–‡ã«SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ã‚»ãƒƒãƒˆã—ãŸã†ãˆã§å®Ÿéš›ã«å®Ÿè¡Œã—ã¦ã¿ã¾ã™:["
                 // + argSql + "]");
 
                 bindSqlInParameter(stmt, argSqlInParameter);
 
                 resultSet = stmt.executeQuery();
-                // SQLÀs—áŠO‚ÍA‚»‚Ì‚Ü‚ÜƒXƒ[‚µ‚Ü‚·B
+                // SQLå®Ÿè¡Œæ™‚ä¾‹å¤–ã¯ã€ãã®ã¾ã¾ã‚¹ãƒ­ãƒ¼ã—ã¾ã™ã€‚
             }
 
             ResultSetMetaData resultSetMetaData = null;
             if (resultSet != null) {
-                // Œ‹‰ÊƒZƒbƒg‚ª‚ ‚é‚Ì‚Å‚ ‚ê‚ÎA‚»‚ê‚ğ—˜—pB
-                // ‚È‚º‚È‚çJDBCƒhƒ‰ƒCƒo‚É‚æ‚Á‚Ä‚ÍAŒ‹‰ÊƒZƒbƒg‚ğæ“¾‚µ‚È‚¢‚Åstmt‚©‚çæ“¾‚·‚éƒpƒX‚ª—˜—p‚Å‚«‚È‚¢‚©‚ç‚Å‚·B
+                // çµæœã‚»ãƒƒãƒˆãŒã‚ã‚‹ã®ã§ã‚ã‚Œã°ã€ãã‚Œã‚’åˆ©ç”¨ã€‚
+                // ãªãœãªã‚‰JDBCãƒ‰ãƒ©ã‚¤ãƒã«ã‚ˆã£ã¦ã¯ã€çµæœã‚»ãƒƒãƒˆã‚’å–å¾—ã—ãªã„ã§stmtã‹ã‚‰å–å¾—ã™ã‚‹ãƒ‘ã‚¹ãŒåˆ©ç”¨ã§ããªã„ã‹ã‚‰ã§ã™ã€‚
                 resultSetMetaData = resultSet.getMetaData();
             } else {
                 resultSetMetaData = stmt.getMetaData();
@@ -92,7 +92,7 @@ public class BlancoDbMetaDataSql {
 
             if (resultSetMetaData == null) {
                 throw new IllegalArgumentException(
-                        "ƒƒ^î•ñæ“¾: Œ‹‰ÊƒZƒbƒgƒƒ^î•ñ‚Ìæ“¾‚É¸”s‚µ‚Ü‚µ‚½BSQLÀsƒIƒvƒVƒ‡ƒ“‚ğiterator‚É•ÏX‚µ‚Ä‚­‚¾‚³‚¢B");
+                        "ãƒ¡ã‚¿æƒ…å ±å–å¾—: çµæœã‚»ãƒƒãƒˆãƒ¡ã‚¿æƒ…å ±ã®å–å¾—ã«å¤±æ•—ã—ã¾ã—ãŸã€‚SQLå®Ÿè¡Œã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’iteratorã«å¤‰æ›´ã—ã¦ãã ã•ã„ã€‚");
             }
 
             final int columnCount = resultSetMetaData.getColumnCount();
@@ -103,8 +103,8 @@ public class BlancoDbMetaDataSql {
             }
         } finally {
             if (resultSet != null) {
-                // Œ‹‰ÊƒZƒbƒgƒƒ^ƒf[ƒ^‚ğæ“¾‚µ‚Ä‚©‚çƒNƒ[ƒY‚·‚é‚æ‚¤‚É‚µ‚Ü‚·B
-                // ‚»‚¤‚µ‚È‚¢‚Æ PostgreSQL 8.1‚Å‚Íƒƒ^ƒf[ƒ^æ“¾‚ªo—ˆ‚Ü‚¹‚ñ‚Å‚µ‚½B
+                // çµæœã‚»ãƒƒãƒˆãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã‚’å–å¾—ã—ã¦ã‹ã‚‰ã‚¯ãƒ­ãƒ¼ã‚ºã™ã‚‹ã‚ˆã†ã«ã—ã¾ã™ã€‚
+                // ãã†ã—ãªã„ã¨ PostgreSQL 8.1ã§ã¯ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿å–å¾—ãŒå‡ºæ¥ã¾ã›ã‚“ã§ã—ãŸã€‚
                 resultSet.close();
                 resultSet = null;
             }
@@ -115,7 +115,7 @@ public class BlancoDbMetaDataSql {
     }
 
     /**
-     * ResultSetMetaDataî•ñ‚ğ\‘¢‘Ì‚É“WŠJ‚µ‚Ü‚·B
+     * ResultSetMetaDataæƒ…å ±ã‚’æ§‹é€ ä½“ã«å±•é–‹ã—ã¾ã™ã€‚
      * 
      * @param resultSetMetaData
      * @param indexColumn
@@ -126,7 +126,7 @@ public class BlancoDbMetaDataSql {
             final ResultSetMetaData resultSetMetaData, final int indexColumn)
             throws SQLException {
         final BlancoDbMetaDataColumnStructure columnStructure = new BlancoDbMetaDataColumnStructure();
-        // 2012.01.06 ˆÈ‘O‚Í getColumnName ‚Å‚ ‚Á‚½‚ªAMySQL 5.1 ‘Î‰‚Ì‚½‚ß‚É‚±‚ê‚ğ•ÏXB
+        // 2012.01.06 ä»¥å‰ã¯ getColumnName ã§ã‚ã£ãŸãŒã€MySQL 5.1 å¯¾å¿œã®ãŸã‚ã«ã“ã‚Œã‚’å¤‰æ›´ã€‚
         columnStructure.setName(resultSetMetaData.getColumnLabel(indexColumn));
         columnStructure.setDataType(resultSetMetaData
                 .getColumnType(indexColumn));
@@ -146,30 +146,30 @@ public class BlancoDbMetaDataSql {
         columnStructure.setNullableDisplayName(BlancoDbMetaDataUtil
                 .convertJdbcNullableToString(columnStructure.getNullable()));
 
-        // SQLÀs‚É‚Ì‚İæ“¾‰Â”\‚È€–ÚB
+        // SQLå®Ÿè¡Œæ™‚ã«ã®ã¿å–å¾—å¯èƒ½ãªé …ç›®ã€‚
         columnStructure.setWritable(resultSetMetaData.isWritable(indexColumn));
 
         return columnStructure;
     }
 
     /**
-     * SQL“ü—Íƒpƒ‰ƒ[ƒ^‚ğƒoƒCƒ“ƒh‚µ‚Ü‚·B
+     * SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ãƒã‚¤ãƒ³ãƒ‰ã—ã¾ã™ã€‚
      * 
      * @param stmt
      * @param argSqlInParameter
      * @throws SQLException
      * @throws IllegalArgumentException
-     *             SQL“ü—Íƒpƒ‰ƒ[ƒ^‚ª•s³‚Èê‡‚È‚Ç‚É”­¶‚µ‚Ü‚·B
+     *             SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãŒä¸æ­£ãªå ´åˆãªã©ã«ç™ºç”Ÿã—ã¾ã™ã€‚
      */
     private static void bindSqlInParameter(final PreparedStatement stmt,
             final List<BlancoDbMetaDataColumnStructure> argSqlInParameter)
             throws SQLException {
         if (argSqlInParameter == null) {
-            // ƒpƒ‰ƒ[ƒ^‚ªnull‚Ìê‡‚É‚ÍAƒoƒCƒ“ƒh‚·‚é‚×‚«SQL“ü—Íƒpƒ‰ƒ[ƒ^‚ª–³‚¢‚à‚Ì‚Æ”»’f‚µ‚Ü‚·B
+            // ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãŒnullã®å ´åˆã«ã¯ã€ãƒã‚¤ãƒ³ãƒ‰ã™ã‚‹ã¹ãSQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãŒç„¡ã„ã‚‚ã®ã¨åˆ¤æ–­ã—ã¾ã™ã€‚
             return;
         }
 
-        // SQL“ü—Íƒpƒ‰ƒ[ƒ^‚ğƒZƒbƒg‚µ‚Ü‚·B
+        // SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ã‚»ãƒƒãƒˆã—ã¾ã™ã€‚
         for (int indexInParameter = 0; indexInParameter < argSqlInParameter
                 .size(); indexInParameter++) {
             final BlancoDbMetaDataColumnStructure columnStructure = argSqlInParameter
@@ -201,7 +201,7 @@ public class BlancoDbMetaDataSql {
                 break;
             case Types.NUMERIC:
             case Types.DECIMAL:
-                // "0"‚Æ‚µ‚Ä—^‚¦‚Ä‚¢‚Ü‚·BJDK1.5‘Îô‚Å‚·B
+                // "0"ã¨ã—ã¦ä¸ãˆã¦ã„ã¾ã™ã€‚JDK1.5å¯¾ç­–ã§ã™ã€‚
                 stmt.setBigDecimal(indexInParameter + 1, new BigDecimal("0"));
                 break;
             case Types.CHAR:
@@ -210,13 +210,13 @@ public class BlancoDbMetaDataSql {
             case Types.NCHAR:
             case Types.NVARCHAR:
             case Types.LONGNVARCHAR:
-                // SQL Server 2005‚Ìuniqueidentifier‚Å‚ÍAnull‚ğ—^‚¦‚é‚Ì‚ªÅ“K‚Å‚·B
+                // SQL Server 2005ã®uniqueidentifierã§ã¯ã€nullã‚’ä¸ãˆã‚‹ã®ãŒæœ€é©ã§ã™ã€‚
                 stmt.setString(indexInParameter + 1, null);
                 break;
             case Types.DATE:
-                // ‰¼‚Å TIMESTAMP‚Æ“¯‚¶“®‚«‚ğ‚³‚¹‚Ä‚¢‚Ü‚·B
+                // ä»®ã§ TIMESTAMPã¨åŒã˜å‹•ãã‚’ã•ã›ã¦ã„ã¾ã™ã€‚
             case Types.TIME:
-                // ‰¼‚Å TIMESTAMP‚Æ“¯‚¶“®‚«‚ğ‚³‚¹‚Ä‚¢‚Ü‚·B
+                // ä»®ã§ TIMESTAMPã¨åŒã˜å‹•ãã‚’ã•ã›ã¦ã„ã¾ã™ã€‚
             case Types.TIMESTAMP:
                 stmt.setTimestamp(indexInParameter + 1, new Timestamp(0));
                 break;
@@ -246,21 +246,21 @@ public class BlancoDbMetaDataSql {
             case Types.OTHER:
             case Types.REF:
             case Types.DATALINK:
-            case Types.ROWID:// ‚³‚µ‚ ‚½‚èƒTƒ|[ƒg”ÍˆÍŠO‚Éƒ}ƒbƒv‚µ‚Ü‚·B
+            case Types.ROWID:// ã•ã—ã‚ãŸã‚Šã‚µãƒãƒ¼ãƒˆç¯„å›²å¤–ã«ãƒãƒƒãƒ—ã—ã¾ã™ã€‚
             default:
                 throw new IllegalArgumentException(
-                        "BlancoDbMetaDataSql: SQL“ü—Íƒpƒ‰ƒ[ƒ^["
+                        "BlancoDbMetaDataSql: SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿["
                                 + columnStructure.getName()
                                 + "]("
                                 + BlancoDbMetaDataUtil
                                         .convertJdbcDataTypeToString(columnStructure
                                                 .getDataType())
-                                + ")‚ÌƒoƒCƒ“ƒh: ˆ—‚Å‚«‚È‚¢SQL“ü—Íƒpƒ‰ƒ[ƒ^‚ÌŒ^("
+                                + ")ã®ãƒã‚¤ãƒ³ãƒ‰: å‡¦ç†ã§ããªã„SQLå…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®å‹("
                                 + columnStructure.getDataType()
                                 + "/"
                                 + BlancoDbMetaDataUtil
                                         .convertJdbcDataTypeToString(columnStructure
-                                                .getDataType()) + ")‚ªw’è‚³‚ê‚Ü‚µ‚½B");
+                                                .getDataType()) + ")ãŒæŒ‡å®šã•ã‚Œã¾ã—ãŸã€‚");
             }
         }
     }

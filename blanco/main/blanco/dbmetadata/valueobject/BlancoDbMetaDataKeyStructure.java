@@ -1,410 +1,410 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
  */
 package blanco.dbmetadata.valueobject;
 
 /**
- * ƒL[‚ÉŠÖ‚·‚éî•ñ‚ğŠi”[‚µ‚Ü‚·Bjava.sql.DatabaseMetaData.getImportedKeys Ajava.sql.DatabaseMetaData.getExportedKeys A java.sql.DatabaseMetaData.getPrimaryKeys ‚Ì–ß‚è’l‚ğŠi”[‚µ‚Ü‚·B
+ * ã‚­ãƒ¼ã«é–¢ã™ã‚‹æƒ…å ±ã‚’æ ¼ç´ã—ã¾ã™ã€‚java.sql.DatabaseMetaData.getImportedKeys ã€java.sql.DatabaseMetaData.getExportedKeys ã€ java.sql.DatabaseMetaData.getPrimaryKeys ã®æˆ»ã‚Šå€¤ã‚’æ ¼ç´ã—ã¾ã™ã€‚
  */
 public class BlancoDbMetaDataKeyStructure {
     /**
-     * åƒL[‚Ì•\ƒJƒ^ƒƒOB
+     * ä¸»ã‚­ãƒ¼ã®è¡¨ã‚«ã‚¿ãƒ­ã‚°ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [PKTABLE_CAT]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [PKTABLE_CAT]ã€‚
      */
     private String fPktableCat;
 
     /**
-     * åƒL[‚Ì•\ƒXƒL[ƒ}B
+     * ä¸»ã‚­ãƒ¼ã®è¡¨ã‚¹ã‚­ãƒ¼ãƒã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [PKTABLE_SCHEM]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [PKTABLE_SCHEM]ã€‚
      */
     private String fPktableSchem;
 
     /**
-     * åƒL[‚Ì•\–¼B
+     * ä¸»ã‚­ãƒ¼ã®è¡¨åã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [PKTABLE_NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [PKTABLE_NAME]ã€‚
      */
     private String fPktableName;
 
     /**
-     * PKCOLUMN_NAMEA‚Ü‚½‚ÍCOLUMN_NAME: åƒL[‚Ì—ñ–¼Bjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·BCOLUMN_NAME‚ªŠi”[‚³‚ê‚Ü‚·B
+     * PKCOLUMN_NAMEã€ã¾ãŸã¯COLUMN_NAME: ä¸»ã‚­ãƒ¼ã®åˆ—åã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚COLUMN_NAMEãŒæ ¼ç´ã•ã‚Œã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [PKCOLUMN_NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [PKCOLUMN_NAME]ã€‚
      */
     private String fPkcolumnName;
 
     /**
-     * ŠO•”ƒL[‚Ì•\ƒJƒ^ƒƒOB
+     * å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨ã‚«ã‚¿ãƒ­ã‚°ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [FKTABLE_CAT]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [FKTABLE_CAT]ã€‚
      */
     private String fFktableCat;
 
     /**
-     * ŠO•”ƒL[‚Ì•\ƒXƒL[ƒ}B
+     * å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨ã‚¹ã‚­ãƒ¼ãƒã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [FKTABLE_SCHEM]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [FKTABLE_SCHEM]ã€‚
      */
     private String fFktableSchem;
 
     /**
-     * ŠO•”ƒL[‚Ì•\–¼B
+     * å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨åã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [FKTABLE_NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [FKTABLE_NAME]ã€‚
      */
     private String fFktableName;
 
     /**
-     * ŠO•”ƒL[‚Ì—ñ–¼B
+     * å¤–éƒ¨ã‚­ãƒ¼ã®åˆ—åã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [FKCOLUMN_NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [FKCOLUMN_NAME]ã€‚
      */
     private String fFkcolumnName;
 
     /**
-     * KEY_SEQ: ƒL[‚Ì‚È‚©‚Ì˜A”ÔBjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·B
+     * KEY_SEQ: ã‚­ãƒ¼ã®ãªã‹ã®é€£ç•ªã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [KEY_SEQ]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [KEY_SEQ]ã€‚
      */
     private short fKeySeq;
 
     /**
-     * ƒtƒB[ƒ‹ƒh: [UPDATE_RULE]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [UPDATE_RULE]ã€‚
      */
     private short fUpdateRule;
 
     /**
-     * ƒtƒB[ƒ‹ƒh: [DELETE_RULE]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [DELETE_RULE]ã€‚
      */
     private short fDeleteRule;
 
     /**
-     * ŠO•”ƒL[–¼B
+     * å¤–éƒ¨ã‚­ãƒ¼åã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [FK_NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [FK_NAME]ã€‚
      */
     private String fFkName;
 
     /**
-     * PK_NAME: åƒL[–¼Bjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·B
+     * PK_NAME: ä¸»ã‚­ãƒ¼åã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [PK_NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [PK_NAME]ã€‚
      */
     private String fPkName;
 
     /**
-     * ƒtƒB[ƒ‹ƒh: [DEFERRABILITY]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [DEFERRABILITY]ã€‚
      */
     private short fDeferrability;
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PKTABLE_CAT] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PKTABLE_CAT] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [åƒL[‚Ì•\ƒJƒ^ƒƒOB]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ä¸»ã‚­ãƒ¼ã®è¡¨ã‚«ã‚¿ãƒ­ã‚°ã€‚]ã€‚
      *
-     * @param argPktableCat ƒtƒB[ƒ‹ƒh[PKTABLE_CAT]‚Éİ’è‚·‚é’lB
+     * @param argPktableCat ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PKTABLE_CAT]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setPktableCat(final String argPktableCat) {
         fPktableCat = argPktableCat;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PKTABLE_CAT] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PKTABLE_CAT] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [åƒL[‚Ì•\ƒJƒ^ƒƒOB]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ä¸»ã‚­ãƒ¼ã®è¡¨ã‚«ã‚¿ãƒ­ã‚°ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[PKTABLE_CAT]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PKTABLE_CAT]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getPktableCat() {
         return fPktableCat;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PKTABLE_SCHEM] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PKTABLE_SCHEM] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [åƒL[‚Ì•\ƒXƒL[ƒ}B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ä¸»ã‚­ãƒ¼ã®è¡¨ã‚¹ã‚­ãƒ¼ãƒã€‚]ã€‚
      *
-     * @param argPktableSchem ƒtƒB[ƒ‹ƒh[PKTABLE_SCHEM]‚Éİ’è‚·‚é’lB
+     * @param argPktableSchem ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PKTABLE_SCHEM]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setPktableSchem(final String argPktableSchem) {
         fPktableSchem = argPktableSchem;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PKTABLE_SCHEM] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PKTABLE_SCHEM] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [åƒL[‚Ì•\ƒXƒL[ƒ}B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ä¸»ã‚­ãƒ¼ã®è¡¨ã‚¹ã‚­ãƒ¼ãƒã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[PKTABLE_SCHEM]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PKTABLE_SCHEM]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getPktableSchem() {
         return fPktableSchem;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PKTABLE_NAME] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PKTABLE_NAME] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [åƒL[‚Ì•\–¼B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ä¸»ã‚­ãƒ¼ã®è¡¨åã€‚]ã€‚
      *
-     * @param argPktableName ƒtƒB[ƒ‹ƒh[PKTABLE_NAME]‚Éİ’è‚·‚é’lB
+     * @param argPktableName ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PKTABLE_NAME]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setPktableName(final String argPktableName) {
         fPktableName = argPktableName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PKTABLE_NAME] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PKTABLE_NAME] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [åƒL[‚Ì•\–¼B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ä¸»ã‚­ãƒ¼ã®è¡¨åã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[PKTABLE_NAME]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PKTABLE_NAME]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getPktableName() {
         return fPktableName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PKCOLUMN_NAME] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PKCOLUMN_NAME] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [PKCOLUMN_NAMEA‚Ü‚½‚ÍCOLUMN_NAME: åƒL[‚Ì—ñ–¼Bjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·BCOLUMN_NAME‚ªŠi”[‚³‚ê‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [PKCOLUMN_NAMEã€ã¾ãŸã¯COLUMN_NAME: ä¸»ã‚­ãƒ¼ã®åˆ—åã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚COLUMN_NAMEãŒæ ¼ç´ã•ã‚Œã¾ã™ã€‚]ã€‚
      *
-     * @param argPkcolumnName ƒtƒB[ƒ‹ƒh[PKCOLUMN_NAME]‚Éİ’è‚·‚é’lB
+     * @param argPkcolumnName ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PKCOLUMN_NAME]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setPkcolumnName(final String argPkcolumnName) {
         fPkcolumnName = argPkcolumnName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PKCOLUMN_NAME] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PKCOLUMN_NAME] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [PKCOLUMN_NAMEA‚Ü‚½‚ÍCOLUMN_NAME: åƒL[‚Ì—ñ–¼Bjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·BCOLUMN_NAME‚ªŠi”[‚³‚ê‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [PKCOLUMN_NAMEã€ã¾ãŸã¯COLUMN_NAME: ä¸»ã‚­ãƒ¼ã®åˆ—åã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚COLUMN_NAMEãŒæ ¼ç´ã•ã‚Œã¾ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[PKCOLUMN_NAME]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PKCOLUMN_NAME]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getPkcolumnName() {
         return fPkcolumnName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FKTABLE_CAT] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FKTABLE_CAT] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[‚Ì•\ƒJƒ^ƒƒOB]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨ã‚«ã‚¿ãƒ­ã‚°ã€‚]ã€‚
      *
-     * @param argFktableCat ƒtƒB[ƒ‹ƒh[FKTABLE_CAT]‚Éİ’è‚·‚é’lB
+     * @param argFktableCat ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FKTABLE_CAT]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setFktableCat(final String argFktableCat) {
         fFktableCat = argFktableCat;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FKTABLE_CAT] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FKTABLE_CAT] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[‚Ì•\ƒJƒ^ƒƒOB]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨ã‚«ã‚¿ãƒ­ã‚°ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[FKTABLE_CAT]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FKTABLE_CAT]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getFktableCat() {
         return fFktableCat;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FKTABLE_SCHEM] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FKTABLE_SCHEM] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[‚Ì•\ƒXƒL[ƒ}B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨ã‚¹ã‚­ãƒ¼ãƒã€‚]ã€‚
      *
-     * @param argFktableSchem ƒtƒB[ƒ‹ƒh[FKTABLE_SCHEM]‚Éİ’è‚·‚é’lB
+     * @param argFktableSchem ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FKTABLE_SCHEM]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setFktableSchem(final String argFktableSchem) {
         fFktableSchem = argFktableSchem;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FKTABLE_SCHEM] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FKTABLE_SCHEM] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[‚Ì•\ƒXƒL[ƒ}B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨ã‚¹ã‚­ãƒ¼ãƒã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[FKTABLE_SCHEM]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FKTABLE_SCHEM]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getFktableSchem() {
         return fFktableSchem;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FKTABLE_NAME] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FKTABLE_NAME] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[‚Ì•\–¼B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨åã€‚]ã€‚
      *
-     * @param argFktableName ƒtƒB[ƒ‹ƒh[FKTABLE_NAME]‚Éİ’è‚·‚é’lB
+     * @param argFktableName ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FKTABLE_NAME]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setFktableName(final String argFktableName) {
         fFktableName = argFktableName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FKTABLE_NAME] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FKTABLE_NAME] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[‚Ì•\–¼B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼ã®è¡¨åã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[FKTABLE_NAME]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FKTABLE_NAME]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getFktableName() {
         return fFktableName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FKCOLUMN_NAME] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FKCOLUMN_NAME] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[‚Ì—ñ–¼B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼ã®åˆ—åã€‚]ã€‚
      *
-     * @param argFkcolumnName ƒtƒB[ƒ‹ƒh[FKCOLUMN_NAME]‚Éİ’è‚·‚é’lB
+     * @param argFkcolumnName ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FKCOLUMN_NAME]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setFkcolumnName(final String argFkcolumnName) {
         fFkcolumnName = argFkcolumnName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FKCOLUMN_NAME] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FKCOLUMN_NAME] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[‚Ì—ñ–¼B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼ã®åˆ—åã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[FKCOLUMN_NAME]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FKCOLUMN_NAME]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getFkcolumnName() {
         return fFkcolumnName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [KEY_SEQ] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [KEY_SEQ] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [KEY_SEQ: ƒL[‚Ì‚È‚©‚Ì˜A”ÔBjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [KEY_SEQ: ã‚­ãƒ¼ã®ãªã‹ã®é€£ç•ªã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚]ã€‚
      *
-     * @param argKeySeq ƒtƒB[ƒ‹ƒh[KEY_SEQ]‚Éİ’è‚·‚é’lB
+     * @param argKeySeq ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[KEY_SEQ]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setKeySeq(final short argKeySeq) {
         fKeySeq = argKeySeq;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [KEY_SEQ] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [KEY_SEQ] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [KEY_SEQ: ƒL[‚Ì‚È‚©‚Ì˜A”ÔBjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [KEY_SEQ: ã‚­ãƒ¼ã®ãªã‹ã®é€£ç•ªã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[KEY_SEQ]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[KEY_SEQ]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public short getKeySeq() {
         return fKeySeq;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [UPDATE_RULE] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [UPDATE_RULE] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * @param argUpdateRule ƒtƒB[ƒ‹ƒh[UPDATE_RULE]‚Éİ’è‚·‚é’lB
+     * @param argUpdateRule ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[UPDATE_RULE]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setUpdateRule(final short argUpdateRule) {
         fUpdateRule = argUpdateRule;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [UPDATE_RULE] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [UPDATE_RULE] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[UPDATE_RULE]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[UPDATE_RULE]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public short getUpdateRule() {
         return fUpdateRule;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [DELETE_RULE] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [DELETE_RULE] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * @param argDeleteRule ƒtƒB[ƒ‹ƒh[DELETE_RULE]‚Éİ’è‚·‚é’lB
+     * @param argDeleteRule ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[DELETE_RULE]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setDeleteRule(final short argDeleteRule) {
         fDeleteRule = argDeleteRule;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [DELETE_RULE] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [DELETE_RULE] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[DELETE_RULE]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[DELETE_RULE]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public short getDeleteRule() {
         return fDeleteRule;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FK_NAME] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FK_NAME] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[–¼B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼åã€‚]ã€‚
      *
-     * @param argFkName ƒtƒB[ƒ‹ƒh[FK_NAME]‚Éİ’è‚·‚é’lB
+     * @param argFkName ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FK_NAME]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setFkName(final String argFkName) {
         fFkName = argFkName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [FK_NAME] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [FK_NAME] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ŠO•”ƒL[–¼B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [å¤–éƒ¨ã‚­ãƒ¼åã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[FK_NAME]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[FK_NAME]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getFkName() {
         return fFkName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PK_NAME] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PK_NAME] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [PK_NAME: åƒL[–¼Bjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [PK_NAME: ä¸»ã‚­ãƒ¼åã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚]ã€‚
      *
-     * @param argPkName ƒtƒB[ƒ‹ƒh[PK_NAME]‚Éİ’è‚·‚é’lB
+     * @param argPkName ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PK_NAME]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setPkName(final String argPkName) {
         fPkName = argPkName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [PK_NAME] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [PK_NAME] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [PK_NAME: åƒL[–¼Bjava.sql.DatabaseMetaData.getPrimaryKeys ‚Å—˜—p‚³‚ê‚Ä‚¢‚Ü‚·B]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [PK_NAME: ä¸»ã‚­ãƒ¼åã€‚java.sql.DatabaseMetaData.getPrimaryKeys ã§åˆ©ç”¨ã•ã‚Œã¦ã„ã¾ã™ã€‚]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[PK_NAME]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[PK_NAME]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getPkName() {
         return fPkName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [DEFERRABILITY] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [DEFERRABILITY] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * @param argDeferrability ƒtƒB[ƒ‹ƒh[DEFERRABILITY]‚Éİ’è‚·‚é’lB
+     * @param argDeferrability ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[DEFERRABILITY]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setDeferrability(final short argDeferrability) {
         fDeferrability = argDeferrability;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [DEFERRABILITY] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [DEFERRABILITY] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[DEFERRABILITY]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[DEFERRABILITY]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public short getDeferrability() {
         return fDeferrability;
     }
 
     /**
-     * ‚±‚ÌƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»‚ğæ“¾‚µ‚Ü‚·B
+     * ã“ã®ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * <P>g—pã‚Ì’ˆÓ</P>
+     * <P>ä½¿ç”¨ä¸Šã®æ³¨æ„</P>
      * <UL>
-     * <LI>ƒIƒuƒWƒFƒNƒg‚ÌƒVƒƒƒ[”ÍˆÍ‚Ì‚İ•¶š—ñ‰»‚Ìˆ—‘ÎÛ‚Æ‚È‚è‚Ü‚·B
-     * <LI>ƒIƒuƒWƒFƒNƒg‚ªzŠÂQÆ‚µ‚Ä‚¢‚éê‡‚É‚ÍA‚±‚Ìƒƒ\ƒbƒh‚Íg‚í‚È‚¢‚Å‚­‚¾‚³‚¢B
+     * <LI>ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚·ãƒ£ãƒ­ãƒ¼ç¯„å›²ã®ã¿æ–‡å­—åˆ—åŒ–ã®å‡¦ç†å¯¾è±¡ã¨ãªã‚Šã¾ã™ã€‚
+     * <LI>ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå¾ªç’°å‚ç…§ã—ã¦ã„ã‚‹å ´åˆã«ã¯ã€ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã¯ä½¿ã‚ãªã„ã§ãã ã•ã„ã€‚
      * </UL>
      *
-     * @return ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»B
+     * @return ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã€‚
      */
     @Override
     public String toString() {

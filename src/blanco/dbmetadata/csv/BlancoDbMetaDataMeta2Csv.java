@@ -24,28 +24,28 @@ import blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure;
 import blanco.dbmetadata.valueobject.BlancoDbMetaDataTableStructure;
 
 /**
- * ƒf[ƒ^ƒx[ƒX‚©‚çƒƒ^î•ñ‚ğæ“¾‚µ‚ÄCSV‚Éo—Í‚µ‚Ü‚·B
+ * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‹ã‚‰ãƒ¡ã‚¿æƒ…å ±ã‚’å–å¾—ã—ã¦CSVã«å‡ºåŠ›ã—ã¾ã™ã€‚
  * 
  * @author IGA Tosiki
  */
 public class BlancoDbMetaDataMeta2Csv {
     /**
-     * ƒf[ƒ^ƒx[ƒX‚Ìƒƒ^î•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã®ãƒ¡ã‚¿æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param argJdbcDriverName
-     *            JDBCƒhƒ‰ƒCƒo–¼B
+     *            JDBCãƒ‰ãƒ©ã‚¤ãƒåã€‚
      * @param argJdbcUrl
-     *            JDBCÚ‘±æURLB
+     *            JDBCæ¥ç¶šå…ˆURLã€‚
      * @param argJdbcUser
-     *            JDBCÚ‘±ƒ†[ƒU–¼B
+     *            JDBCæ¥ç¶šãƒ¦ãƒ¼ã‚¶åã€‚
      * @param argJdbcPassword
-     *            JDBCÚ‘±ƒpƒXƒ[ƒhB
+     *            JDBCæ¥ç¶šãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã€‚
      * @param argSchema
-     *            ƒXƒL[ƒ}–¼B“Á‚É’l‚ª–³‚¢ê‡‚É‚Ínull‚ğw’èB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚ç‰¹ã«å€¤ãŒç„¡ã„å ´åˆã«ã¯nullã‚’æŒ‡å®šã€‚
      * @param argTable
-     *            ƒe[ƒuƒ‹–¼B“Á‚É’l‚ª–³‚¢ê‡‚É‚Ínull‚ğw’èB
+     *            ãƒ†ãƒ¼ãƒ–ãƒ«åã€‚ç‰¹ã«å€¤ãŒç„¡ã„å ´åˆã«ã¯nullã‚’æŒ‡å®šã€‚
      * @throws SQLException
-     *             Šeí—áŠO‚ª”­¶‚µ‚½ê‡B
+     *             å„ç¨®ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸå ´åˆã€‚
      * @throws IOException
      * @throws ClassNotFoundException
      */
@@ -54,7 +54,7 @@ public class BlancoDbMetaDataMeta2Csv {
             final String argJdbcPassword, final String argSchema,
             final String argTable, final File targetDir) throws SQLException,
             IOException, ClassNotFoundException {
-        System.out.println("ƒf[ƒ^ƒx[ƒXÚ‘±: ŠJn: [" + argJdbcDriverName + "], ["
+        System.out.println("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š: é–‹å§‹: [" + argJdbcDriverName + "], ["
                 + argJdbcUrl + "], [" + argJdbcUser + "]");
         final Connection conn = BlancoDbMetaDataUtil.connect(argJdbcDriverName,
                 argJdbcUrl, argJdbcUser, argJdbcPassword);
@@ -62,16 +62,16 @@ public class BlancoDbMetaDataMeta2Csv {
         List<BlancoDbMetaDataTableStructure> listTables = null;
 
         try {
-            // ©“®ƒRƒ~ƒbƒg‚ğOFF‚Éİ’è‚µ‚Ü‚·B
+            // è‡ªå‹•ã‚³ãƒŸãƒƒãƒˆã‚’OFFã«è¨­å®šã—ã¾ã™ã€‚
             conn.setAutoCommit(false);
 
             listTables = BlancoDbMetaDataTable.getTablesWithColumns(conn,
                     argSchema, argTable, new String[] { "TABLE" });
         } finally {
-            // Œãˆ—‚ğÀs‚µ‚Ü‚·B
+            // å¾Œå‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
             conn.rollback();
             conn.close();
-            System.out.println("ƒf[ƒ^ƒx[ƒXÚ‘±: I—¹");
+            System.out.println("ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š: çµ‚äº†");
         }
 
         WriteCsvForMetaInfo.process(listTables, targetDir);
@@ -82,7 +82,7 @@ public class BlancoDbMetaDataMeta2Csv {
     }
 
     /**
-     * •\‚ÉŠÖ‚·‚éˆê”Ê“I‚Èî•ñ‚ğo—Í‚µ‚Ü‚·B
+     * è¡¨ã«é–¢ã™ã‚‹ä¸€èˆ¬çš„ãªæƒ…å ±ã‚’å‡ºåŠ›ã—ã¾ã™ã€‚
      * 
      * @param tableStructure
      * @param writer
@@ -91,7 +91,7 @@ public class BlancoDbMetaDataMeta2Csv {
     public static void writeTableInfo(
             final BlancoDbMetaDataTableStructure tableStructure,
             final BufferedWriter writer) throws IOException {
-        writer.write("•\–¼,ƒ^ƒCƒv,ƒJƒ^ƒƒO,ƒXƒL[ƒ},”õl");
+        writer.write("è¡¨å,ã‚¿ã‚¤ãƒ—,ã‚«ã‚¿ãƒ­ã‚°,ã‚¹ã‚­ãƒ¼ãƒ,å‚™è€ƒ");
         writer.newLine();
         writer.write(tableStructure.getName());
         writer.write(",");
@@ -106,7 +106,7 @@ public class BlancoDbMetaDataMeta2Csv {
     }
 
     /**
-     * €–Ú‚ÌŒ^–¼‚ğo—Í‚µ‚Ü‚·B
+     * é …ç›®ã®å‹åã‚’å‡ºåŠ›ã—ã¾ã™ã€‚
      * 
      * @param columnStructure
      * @param writer
@@ -117,15 +117,15 @@ public class BlancoDbMetaDataMeta2Csv {
             final BufferedWriter writer) throws IOException {
         writer.write(columnStructure.getTypeName());
 
-        // Œ^‚É‚æ‚Á‚Ä ƒTƒCƒY•\Œ»‚ğØ‚è‘Ö‚¦‚Ü‚·B
+        // å‹ã«ã‚ˆã£ã¦ ã‚µã‚¤ã‚ºè¡¨ç¾ã‚’åˆ‡ã‚Šæ›¿ãˆã¾ã™ã€‚
         if (columnStructure.getColumnSize() < 0) {
-            // ƒTƒCƒY‚ª0‚æ‚è¬‚³‚¢ê‡‚É‚ÍAƒTƒCƒY‚Í•\¦‚µ‚Ü‚¹‚ñB
-            // PostgreSQL‚Ìê‡‚ÉA-1‚ª–ß‚éd—l‚Å‚µ‚½B
+            // ã‚µã‚¤ã‚ºãŒ0ã‚ˆã‚Šå°ã•ã„å ´åˆã«ã¯ã€ã‚µã‚¤ã‚ºã¯è¡¨ç¤ºã—ã¾ã›ã‚“ã€‚
+            // PostgreSQLã®å ´åˆã«ã€-1ãŒæˆ»ã‚‹ä»•æ§˜ã§ã—ãŸã€‚
         } else {
             switch (columnStructure.getDataType()) {
             case Types.NUMERIC:
             case Types.DECIMAL:
-                // ¬”ƒTƒCƒY‚ğŠÜ‚ß‚Ä•\¦‚µ‚Ü‚·B
+                // å°æ•°ã‚µã‚¤ã‚ºã‚’å«ã‚ã¦è¡¨ç¤ºã—ã¾ã™ã€‚
                 writer.write(" (" + columnStructure.getColumnSize() + "."
                         + columnStructure.getDecimalDigits() + ")");
                 break;
@@ -141,7 +141,7 @@ public class BlancoDbMetaDataMeta2Csv {
             case Types.TIMESTAMP:
             case Types.NULL:
             case Types.BOOLEAN:
-                // ƒTƒCƒY‚ÉŠÖ‚·‚é•\¦‚É‚Â‚¢‚Ä‚ÍA‰½‚ào—Í‚µ‚Ü‚¹‚ñB
+                // ã‚µã‚¤ã‚ºã«é–¢ã™ã‚‹è¡¨ç¤ºã«ã¤ã„ã¦ã¯ã€ä½•ã‚‚å‡ºåŠ›ã—ã¾ã›ã‚“ã€‚
                 break;
             default:
                 writer.write(" (" + columnStructure.getColumnSize() + ")");

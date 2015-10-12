@@ -1,64 +1,64 @@
 2014.03.12 (0.1.7.2)
-  �r���h������
+  ビルドし直し
 
 2012.05.28 (0.1.7.1)
-  �\�[�X�E�p�b�P�[�W���O�̂��߂Ƀr���h���Ȃ����B
+  ソース・パッケージングのためにビルドしなおし。
   update jars.
 
 2012.01.06 (0.1.7)
-  MySQL 5.1 �Ή�
-  ResultSetMetaData �� getColumnName -> getColumnLabel �ւƕύX�B�������Ȃ��� AS �̖��̂��擾�ł��܂���B 
+  MySQL 5.1 対応
+  ResultSetMetaData の getColumnName -> getColumnLabel へと変更。こうしないと AS の名称が取得できません。 
 
 2011.02.07 (0.1.6)
-  JDBC 4.0 �Ή� (SQL Server 2008)
+  JDBC 4.0 対応 (SQL Server 2008)
 
 2009.11.05 (0.1.5)
-  �N���X�����[�h�ł��Ȃ��ꍇ�̗�O�ɂ��āA���̂܂܂Ƃ���B
+  クラスがロードできない場合の例外について、そのままとする。
 
 2009.10.29 (0.1.4)
-  �N���X���[�_�[�Ή��̉��P�B
+  クラスローダー対応の改善。
 
 2009.10.28 (0.1.3)
-  �N���X���[�_�[�Ή��B
+  クラスローダー対応。
 
 2009.03.26 (0.1.2)
-  blancoDb �{�̂̃o�[�W�����A�b�v�Ή�
-  ���ׂȃo�O�Ή��ȂǁB
+  blancoDb 本体のバージョンアップ対応
+  微細なバグ対応など。
 
 2008.12.05 (0.1.1)
-  JDK 1.5 �Ή�
+  JDK 1.5 対応
 
-2006.12.04 (0.1.0) JDK 1.4.2 �Ή��̍ŏI��
-  (csv�o��)csv�p�b�P�[�W���쐬���āACSV�o�͊֘A�N���X�������Ɉړ����܂����B
-  (csv�o��)�S�e�[�u���̏���1�t�@�C���ɂ܂Ƃ߂ďo�͂���@�\��ǉ����܂����B
+2006.12.04 (0.1.0) JDK 1.4.2 対応の最終版
+  (csv出力)csvパッケージを作成して、CSV出力関連クラスをそこに移動しました。
+  (csv出力)全テーブルの情報を1ファイルにまとめて出力する機能を追加しました。
 
 2006.11.29 (0.0.9)
-  ���ʃZ�b�g���^�f�[�^�擾�ɂ��āA���ʃZ�b�g������ꍇ�ɂ� �����D�悵�ė��p����悤�ɕύX�B
+  結果セットメタデータ取得について、結果セットがある場合には それを優先して利用するように変更。
 
 2006.11.28 (0.0.8)
-  SQLException�� ���̂܂܃X���[����悤�Ɏd�l��ύX�B
+  SQLExceptionは そのままスローするように仕様を変更。
 
 2006.11.27 (0.0.7)
-  java.sql.Types�����񂩂�l�ւ̕ϊ����[�e�B���e�B���\�b�h��ǉ����܂����B
-  (column)nullable�̃f�t�H���g�l�� 1 �ɕύX�B
-  �f�[�^�x�[�X�^������Types���������Ă鏈����ǉ��BOracle��OTHER�΍�̂��߂̂��́B
+  java.sql.Types文字列から値への変換ユーティリティメソッドを追加しました。
+  (column)nullableのデフォルト値を 1 に変更。
+  データベース型名からTypesを引き当てる処理を追加。OracleのOTHER対策のためのもの。
 
 2006.11.23 (0.0.6)
-  �\�ꗗ�擾���ɁATABLE�̂ݎ擾���邽�߂̃p�X��ǉ��B�������������ł���B
+  表一覧取得時に、TABLEのみ取得するためのパスを追加。高速化が実現できる。
 
 2006.11.23 (0.0.5)
-  PostgreSQL�œ���m�F���p��(2)�B
-  Column: WRITABLE�t�B�[���h��ǉ��B
+  PostgreSQLで動作確認を継続(2)。
+  Column: WRITABLEフィールドを追加。
 
 2006.11.23 (0.0.4)
-  PostgreSQL�œ���m�F���p���B
+  PostgreSQLで動作確認を継続。
 
 2006.11.23 (0.0.3)
-  PostgreSQL�œ���m�F�����{�B
+  PostgreSQLで動作確認を実施。
 
 2006.11.22 (0.0.2)
-  �e�[�u�����̂��߂�csv�t�@�C����V���ɍ쐬����悤�ɂ��܂����B
-  �Q�Ƃ��Ă���L�[���X�g�擾�ɂ��āAJDBC API�𗘗p����悤�ɕύX���܂����B
+  テーブル情報のためのcsvファイルを新たに作成するようにしました。
+  参照しているキーリスト取得について、JDBC APIを利用するように変更しました。
 
 2006.11.21 (0.0.1)
-  �V�K�쐬
+  新規作成

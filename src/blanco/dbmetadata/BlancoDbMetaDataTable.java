@@ -23,9 +23,9 @@ import blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure;
 import blanco.dbmetadata.valueobject.BlancoDbMetaDataTableStructure;
 
 /**
- * ƒf[ƒ^ƒx[ƒX‚©‚çƒƒ^î•ñ‚ğæ“¾‚·‚éƒ†[ƒeƒBƒŠƒeƒBB
+ * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‹ã‚‰ãƒ¡ã‚¿æƒ…å ±ã‚’å–å¾—ã™ã‚‹ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã€‚
  * 
- * •\‚ÉŠÖ‚·‚éˆ—‚ªŠÜ‚Ü‚ê‚Ü‚·B
+ * è¡¨ã«é–¢ã™ã‚‹å‡¦ç†ãŒå«ã¾ã‚Œã¾ã™ã€‚
  * 
  * @author IGA Tosiki
  */
@@ -33,17 +33,17 @@ public class BlancoDbMetaDataTable {
     private static final boolean IS_REPORT_COLUMN_NOT_FOUND = false;
 
     /**
-     * ƒf[ƒ^ƒx[ƒXã‚Ì‘S‚Ä‚Ì•\‚É‚Â‚¢‚ÄA€–ÚEƒvƒ‰ƒCƒ}ƒŠƒL[‚È‚Ç‚Ìî•ñ•t‚Åæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ä¸Šã®å…¨ã¦ã®è¡¨ã«ã¤ã„ã¦ã€é …ç›®ãƒ»ãƒ—ãƒ©ã‚¤ãƒãƒªã‚­ãƒ¼ãªã©ã®æƒ…å ±ä»˜ã§å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param conn
-     *            ƒf[ƒ^ƒx[ƒXƒRƒlƒNƒVƒ‡ƒ“B
+     *            ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚³ãƒã‚¯ã‚·ãƒ§ãƒ³ã€‚
      * @param argSchema
-     *            ƒXƒL[ƒ}–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argTable
-     *            •\–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            è¡¨åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argTypes
-     *            æ“¾‚·‚éí—Ş‚Ìˆê——Bnull‚È‚ç‘S‚ÄBnew String[] { "TABLE" }‚Ì‚æ‚¤‚Éw’èB
-     * @return •\î•ñ‚Ìˆê——B
+     *            å–å¾—ã™ã‚‹ç¨®é¡ã®ä¸€è¦§ã€‚nullãªã‚‰å…¨ã¦ã€‚new String[] { "TABLE" }ã®ã‚ˆã†ã«æŒ‡å®šã€‚
+     * @return è¡¨æƒ…å ±ã®ä¸€è¦§ã€‚
      * @throws SQLException
      */
     public static List<BlancoDbMetaDataTableStructure> getTablesWithColumns(
@@ -51,7 +51,7 @@ public class BlancoDbMetaDataTable {
             final String argTable, final String[] argTypes) throws SQLException {
         final DatabaseMetaData metadata = conn.getMetaData();
 
-        // •\î•ñ‚ğæ“¾‚µ‚Ü‚·B
+        // è¡¨æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
         final List<BlancoDbMetaDataTableStructure> listTables = BlancoDbMetaDataTable
                 .getTables(metadata, argSchema, argTable, argTypes);
 
@@ -59,7 +59,7 @@ public class BlancoDbMetaDataTable {
         boolean isExportedKeysAvailable = true;
         boolean isCrossReferenceKeysAvailable = true;
 
-        // •\‚É‚Ü‚Â‚í‚é‘S‚Ä‚Ìƒƒ^î•ñ‚ğæ“¾‚µ‚Ü‚·B
+        // è¡¨ã«ã¾ã¤ã‚ã‚‹å…¨ã¦ã®ãƒ¡ã‚¿æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
         for (int indexTable = 0; indexTable < listTables.size(); indexTable++) {
             final BlancoDbMetaDataTableStructure tableStructure = listTables
                     .get(indexTable);
@@ -79,7 +79,7 @@ public class BlancoDbMetaDataTable {
             } catch (SQLException ex) {
                 if (isImportedKeysAvailable) {
                     isImportedKeysAvailable = false;
-                    System.out.println("ƒCƒ“ƒ|[ƒgƒL[æ“¾‚É—áŠO‚ª”­¶:" + ex.toString());
+                    System.out.println("ã‚¤ãƒ³ãƒãƒ¼ãƒˆã‚­ãƒ¼å–å¾—æ™‚ã«ä¾‹å¤–ãŒç™ºç”Ÿ:" + ex.toString());
                 }
             }
 
@@ -90,7 +90,7 @@ public class BlancoDbMetaDataTable {
             } catch (SQLException ex) {
                 if (isExportedKeysAvailable) {
                     isExportedKeysAvailable = false;
-                    System.out.println("ƒGƒNƒXƒ|[ƒgƒL[æ“¾‚É—áŠO‚ª”­¶:" + ex.toString());
+                    System.out.println("ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆã‚­ãƒ¼å–å¾—æ™‚ã«ä¾‹å¤–ãŒç™ºç”Ÿ:" + ex.toString());
                 }
             }
 
@@ -102,7 +102,7 @@ public class BlancoDbMetaDataTable {
             } catch (SQLException ex) {
                 if (isCrossReferenceKeysAvailable) {
                     isCrossReferenceKeysAvailable = false;
-                    System.out.println("ƒNƒƒXQÆæ“¾‚É—áŠO‚ª”­¶:" + ex.toString());
+                    System.out.println("ã‚¯ãƒ­ã‚¹å‚ç…§å–å¾—æ™‚ã«ä¾‹å¤–ãŒç™ºç”Ÿ:" + ex.toString());
                 }
             }
         }
@@ -116,7 +116,7 @@ public class BlancoDbMetaDataTable {
             return resultSet.getString(fieldName);
         } catch (SQLException ex) {
             if (IS_REPORT_COLUMN_NOT_FOUND) {
-                System.out.println("ResultSet‚©‚ç•¶š—ñ‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                System.out.println("ResultSetã‹ã‚‰æ–‡å­—åˆ—ã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                         + ex.toString());
             }
             return null;
@@ -124,19 +124,19 @@ public class BlancoDbMetaDataTable {
     }
 
     /**
-     * ƒf[ƒ^ƒx[ƒXƒƒ^î•ñ‚©‚ç•\‚Ìˆê——î•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿æƒ…å ±ã‹ã‚‰è¡¨ã®ä¸€è¦§æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
-     * •\–¼‚É $ ‚ªŠÜ‚Ü‚ê‚é‚à‚Ì‚Íˆ—‚ğƒXƒLƒbƒv‚µ‚Ü‚·B
+     * è¡¨åã« $ ãŒå«ã¾ã‚Œã‚‹ã‚‚ã®ã¯å‡¦ç†ã‚’ã‚¹ã‚­ãƒƒãƒ—ã—ã¾ã™ã€‚
      * 
      * @param metadata
-     *            ƒf[ƒ^ƒx[ƒXƒƒ^ƒf[ƒ^B
+     *            ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã€‚
      * @param argSchema
-     *            ƒXƒL[ƒ}–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argTable
-     *            •\–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            è¡¨åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argTypes
-     *            æ“¾‚·‚éí—Ş‚Ìˆê——Bnull‚È‚ç‘S‚ÄBnew String[] { "TABLE" }‚Ì‚æ‚¤‚Éw’èB
-     * @return •\î•ñ‚Ìˆê——B
+     *            å–å¾—ã™ã‚‹ç¨®é¡ã®ä¸€è¦§ã€‚nullãªã‚‰å…¨ã¦ã€‚new String[] { "TABLE" }ã®ã‚ˆã†ã«æŒ‡å®šã€‚
+     * @return è¡¨æƒ…å ±ã®ä¸€è¦§ã€‚
      * @throws SQLException
      */
     public static List<BlancoDbMetaDataTableStructure> getTables(
@@ -157,7 +157,7 @@ public class BlancoDbMetaDataTable {
                 // continue;
                 // }
 
-                // System.out.println("•\[" + tableStructure.getName() + "]‚ğˆ—");
+                // System.out.println("è¡¨[" + tableStructure.getName() + "]ã‚’å‡¦ç†");
 
                 tableStructure.setType(resultSet.getString("TABLE_TYPE"));
 
@@ -170,16 +170,16 @@ public class BlancoDbMetaDataTable {
 
                 if (BlancoStringUtil.null2Blank(tableStructure.getName())
                         .length() == 0) {
-                    // •\–¼‚ª–³‚¢‚à‚Ì‚Íˆ—‚ğƒXƒLƒbƒv‚µ‚Ü‚·B
+                    // è¡¨åãŒç„¡ã„ã‚‚ã®ã¯å‡¦ç†ã‚’ã‚¹ã‚­ãƒƒãƒ—ã—ã¾ã™ã€‚
                     continue;
                 }
                 if (BlancoStringUtil.null2Blank(tableStructure.getType())
                         .length() == 0) {
-                    // •\ƒ^ƒCƒv‚ª–³‚¢‚à‚Ì‚Íˆ—‚ğƒXƒLƒbƒv‚µ‚Ü‚·B
+                    // è¡¨ã‚¿ã‚¤ãƒ—ãŒç„¡ã„ã‚‚ã®ã¯å‡¦ç†ã‚’ã‚¹ã‚­ãƒƒãƒ—ã—ã¾ã™ã€‚
                     continue;
                 }
                 if (tableStructure.getName().indexOf('$') >= 0) {
-                    // •\–¼‚É $ ‚ªŠÜ‚Ü‚ê‚Ä‚¢‚é‚à‚Ì‚Íˆ—‚ğƒXƒLƒbƒv‚µ‚Ü‚·B
+                    // è¡¨åã« $ ãŒå«ã¾ã‚Œã¦ã„ã‚‹ã‚‚ã®ã¯å‡¦ç†ã‚’ã‚¹ã‚­ãƒƒãƒ—ã—ã¾ã™ã€‚
                     continue;
                 }
 
@@ -193,17 +193,17 @@ public class BlancoDbMetaDataTable {
     }
 
     /**
-     * ƒf[ƒ^ƒx[ƒXƒƒ^î•ñ‚©‚ç•\‚ÌƒJƒ‰ƒ€ˆê——î•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿æƒ…å ±ã‹ã‚‰è¡¨ã®ã‚«ãƒ©ãƒ ä¸€è¦§æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param metadata
-     *            ƒf[ƒ^ƒx[ƒXƒƒ^ƒf[ƒ^B
+     *            ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã€‚
      * @param argCat
-     *            ƒJƒ^ƒƒO–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚«ã‚¿ãƒ­ã‚°åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argSchema
-     *            ƒXƒL[ƒ}–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argTableName
-     *            •\–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
-     * @return €–Ú‚Ìˆê——‚ª–ß‚éB
+     *            è¡¨åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
+     * @return é …ç›®ã®ä¸€è¦§ãŒæˆ»ã‚‹ã€‚
      * @throws SQLException
      */
     public static List<BlancoDbMetaDataColumnStructure> getColumns(
@@ -233,7 +233,7 @@ public class BlancoDbMetaDataTable {
                             .getInt("COLUMN_SIZE"));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çint‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰intã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -244,7 +244,7 @@ public class BlancoDbMetaDataTable {
                             .getInt("DECIMAL_DIGITS"));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çint‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰intã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -253,7 +253,7 @@ public class BlancoDbMetaDataTable {
                             .getInt("NUM_PREC_RADIX"));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çint‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰intã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -264,7 +264,7 @@ public class BlancoDbMetaDataTable {
                                     .getNullable()));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çint‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰intã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -279,7 +279,7 @@ public class BlancoDbMetaDataTable {
                             .getInt("SQL_DATA_TYPE"));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çint‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰intã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -288,7 +288,7 @@ public class BlancoDbMetaDataTable {
                             .getInt("SQL_DATETIME_SUB"));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çint‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰intã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -297,7 +297,7 @@ public class BlancoDbMetaDataTable {
                             .getInt("CHAR_OCTET_LENGTH"));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çint‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰intã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -306,7 +306,7 @@ public class BlancoDbMetaDataTable {
                             .getInt("ORDINAL_POSITION"));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çint‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰intã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -323,7 +323,7 @@ public class BlancoDbMetaDataTable {
                             .getShort("SOURCE_DATA_TYPE"));
                 } catch (SQLException ex) {
                     if (IS_REPORT_COLUMN_NOT_FOUND) {
-                        System.out.println("ResultSet‚©‚çshort‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                        System.out.println("ResultSetã‹ã‚‰shortã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                                 + ex.toString());
                     }
                 }
@@ -337,17 +337,17 @@ public class BlancoDbMetaDataTable {
     }
 
     /**
-     * ƒf[ƒ^ƒx[ƒXƒƒ^î•ñ‚©‚ç•\‚Ìƒvƒ‰ƒCƒ}ƒŠƒL[î•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿æƒ…å ±ã‹ã‚‰è¡¨ã®ãƒ—ãƒ©ã‚¤ãƒãƒªã‚­ãƒ¼æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param metadata
-     *            ƒf[ƒ^ƒx[ƒXƒƒ^ƒf[ƒ^B
+     *            ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã€‚
      * @param argCat
-     *            ƒJƒ^ƒƒO–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚«ã‚¿ãƒ­ã‚°åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argSchema
-     *            ƒXƒL[ƒ}–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argTableName
-     *            •\–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
-     * @return ƒvƒ‰ƒCƒ}ƒŠƒL[‚Ìˆê——‚ª–ß‚éB
+     *            è¡¨åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
+     * @return ãƒ—ãƒ©ã‚¤ãƒãƒªã‚­ãƒ¼ã®ä¸€è¦§ãŒæˆ»ã‚‹ã€‚
      * @throws SQLException
      */
     public static List<BlancoDbMetaDataKeyStructure> getPrimaryKeys(
@@ -377,17 +377,17 @@ public class BlancoDbMetaDataTable {
     }
 
     /**
-     * ƒf[ƒ^ƒx[ƒXƒƒ^î•ñ‚©‚ç•\‚ÌŠO•”ƒL[—ñ‚ğQÆ‚·‚éåƒL[—ñ‚ÉŠÖ‚·‚éî•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿æƒ…å ±ã‹ã‚‰è¡¨ã®å¤–éƒ¨ã‚­ãƒ¼åˆ—ã‚’å‚ç…§ã™ã‚‹ä¸»ã‚­ãƒ¼åˆ—ã«é–¢ã™ã‚‹æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param metadata
-     *            ƒf[ƒ^ƒx[ƒXƒƒ^ƒf[ƒ^B
+     *            ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã€‚
      * @param argCat
-     *            ƒJƒ^ƒƒO–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚«ã‚¿ãƒ­ã‚°åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argSchema
-     *            ƒXƒL[ƒ}–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argTableName
-     *            •\–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
-     * @return åƒL[—ñ‚Ìˆê——‚ª–ß‚éB
+     *            è¡¨åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
+     * @return ä¸»ã‚­ãƒ¼åˆ—ã®ä¸€è¦§ãŒæˆ»ã‚‹ã€‚
      * @throws SQLException
      */
     public static List<BlancoDbMetaDataKeyStructure> getImportedKeys(
@@ -410,17 +410,17 @@ public class BlancoDbMetaDataTable {
     }
 
     /**
-     * ƒf[ƒ^ƒx[ƒXƒƒ^î•ñ‚©‚ç•\‚ÌŠO•”ƒL[—ñ‚ğQÆ‚·‚éåƒL[—ñ‚ÉŠÖ‚·‚éî•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿æƒ…å ±ã‹ã‚‰è¡¨ã®å¤–éƒ¨ã‚­ãƒ¼åˆ—ã‚’å‚ç…§ã™ã‚‹ä¸»ã‚­ãƒ¼åˆ—ã«é–¢ã™ã‚‹æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param metadata
-     *            ƒf[ƒ^ƒx[ƒXƒƒ^ƒf[ƒ^B
+     *            ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã€‚
      * @param argCat
-     *            ƒJƒ^ƒƒO–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚«ã‚¿ãƒ­ã‚°åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argSchema
-     *            ƒXƒL[ƒ}–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argTableName
-     *            •\–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
-     * @return åƒL[—ñ‚Ìˆê——‚ª–ß‚éB
+     *            è¡¨åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
+     * @return ä¸»ã‚­ãƒ¼åˆ—ã®ä¸€è¦§ãŒæˆ»ã‚‹ã€‚
      * @throws SQLException
      */
     public static List<BlancoDbMetaDataKeyStructure> getExportedKeys(
@@ -443,23 +443,23 @@ public class BlancoDbMetaDataTable {
     }
 
     /**
-     * ƒf[ƒ^ƒx[ƒXƒƒ^î•ñ‚©‚ç•\‚ÌŠO•”ƒL[—ñ‚ÉŠÖ‚·‚éî•ñ‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿æƒ…å ±ã‹ã‚‰è¡¨ã®å¤–éƒ¨ã‚­ãƒ¼åˆ—ã«é–¢ã™ã‚‹æƒ…å ±ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
      * @param metadata
-     *            ƒf[ƒ^ƒx[ƒXƒƒ^ƒf[ƒ^B
+     *            ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã€‚
      * @param argPrimaryCat
-     *            ƒJƒ^ƒƒO–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚«ã‚¿ãƒ­ã‚°åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argPrimarySchema
-     *            ƒXƒL[ƒ}–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argPrimaryTableName
-     *            •\–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            è¡¨åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argForeignCat
-     *            ƒJƒ^ƒƒO–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚«ã‚¿ãƒ­ã‚°åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argForeignSchema
-     *            ƒXƒL[ƒ}–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
+     *            ã‚¹ã‚­ãƒ¼ãƒåã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
      * @param argForeignTableName
-     *            •\–¼Bw’è‚µ‚È‚¢ê‡‚É‚Ínull‚ğ—^‚¦‚éB
-     * @return åƒL[—ñ‚Ìˆê——‚ª–ß‚éB
+     *            è¡¨åã€‚æŒ‡å®šã—ãªã„å ´åˆã«ã¯nullã‚’ä¸ãˆã‚‹ã€‚
+     * @return ä¸»ã‚­ãƒ¼åˆ—ã®ä¸€è¦§ãŒæˆ»ã‚‹ã€‚
      * @throws SQLException
      */
     public static List<BlancoDbMetaDataKeyStructure> getCrossReference(
@@ -484,9 +484,9 @@ public class BlancoDbMetaDataTable {
     }
 
     /**
-     * ResultSet‚©‚çƒL[\‘¢‚ğæ“¾‚µ‚Ü‚·B
+     * ResultSetã‹ã‚‰ã‚­ãƒ¼æ§‹é€ ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
-     * getImportedKeys, getExportedKeys‚È‚Ç‚ÌResultSet‚ª“¯ˆê‚Å‚ ‚é‚±‚Æ‚©‚çA‚±‚ê‚ğ‹¤’Ê‰»‚µ‚Ä‚¢‚Ü‚·B
+     * getImportedKeys, getExportedKeysãªã©ã®ResultSetãŒåŒä¸€ã§ã‚ã‚‹ã“ã¨ã‹ã‚‰ã€ã“ã‚Œã‚’å…±é€šåŒ–ã—ã¦ã„ã¾ã™ã€‚
      * 
      * @param resultSet
      * @return
@@ -510,7 +510,7 @@ public class BlancoDbMetaDataTable {
             keyStructure.setUpdateRule(resultSet.getShort("UPDATE_RULE"));
         } catch (SQLException ex) {
             if (IS_REPORT_COLUMN_NOT_FOUND) {
-                System.out.println("ResultSet‚©‚çshort‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                System.out.println("ResultSetã‹ã‚‰shortã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                         + ex.toString());
             }
         }
@@ -518,7 +518,7 @@ public class BlancoDbMetaDataTable {
             keyStructure.setDeleteRule(resultSet.getShort("DELETE_RULE"));
         } catch (SQLException ex) {
             if (IS_REPORT_COLUMN_NOT_FOUND) {
-                System.out.println("ResultSet‚©‚çshort‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                System.out.println("ResultSetã‹ã‚‰shortã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                         + ex.toString());
             }
         }
@@ -528,7 +528,7 @@ public class BlancoDbMetaDataTable {
             keyStructure.setDeferrability(resultSet.getShort("DEFERRABILITY"));
         } catch (SQLException ex) {
             if (IS_REPORT_COLUMN_NOT_FOUND) {
-                System.out.println("ResultSet‚©‚çshort‚ğæ“¾‚·‚éÛ‚É—áŠO‚ª”­¶B:"
+                System.out.println("ResultSetã‹ã‚‰shortã‚’å–å¾—ã™ã‚‹éš›ã«ä¾‹å¤–ãŒç™ºç”Ÿã€‚:"
                         + ex.toString());
             }
         }

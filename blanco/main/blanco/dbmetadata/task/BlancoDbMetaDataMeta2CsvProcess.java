@@ -1,5 +1,5 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
  */
 package blanco.dbmetadata.task;
 
@@ -8,26 +8,26 @@ import java.io.IOException;
 import blanco.dbmetadata.task.valueobject.BlancoDbMetaDataMeta2CsvProcessInput;
 
 /**
- * ˆ— [BlancoDbMetaDataMeta2CsvProcess]ƒCƒ“ƒ^ƒtƒF[ƒXB
+ * å‡¦ç† [BlancoDbMetaDataMeta2CsvProcess]ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã€‚
  *
- * ‚±‚ÌƒCƒ“ƒ^ƒtƒF[ƒX‚ğŒp³‚µ‚Ä [blanco.dbmetadata.task]ƒpƒbƒP[ƒW‚É[BlancoDbMetaDataMeta2CsvProcess]ƒNƒ‰ƒX‚ğì¬‚µ‚ÄÀÛ‚Ìƒoƒbƒ`ˆ—‚ğÀ‘•‚µ‚Ä‚­‚¾‚³‚¢B<br>
+ * ã“ã®ã‚¤ãƒ³ã‚¿ãƒ•ã‚§ãƒ¼ã‚¹ã‚’ç¶™æ‰¿ã—ã¦ [blanco.dbmetadata.task]ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã«[BlancoDbMetaDataMeta2CsvProcess]ã‚¯ãƒ©ã‚¹ã‚’ä½œæˆã—ã¦å®Ÿéš›ã®ãƒãƒƒãƒå‡¦ç†ã‚’å®Ÿè£…ã—ã¦ãã ã•ã„ã€‚<br>
  */
 interface BlancoDbMetaDataMeta2CsvProcess {
     /**
-     * ƒNƒ‰ƒX‚ğƒCƒ“ƒXƒ^ƒ“ƒX‰»‚µ‚Äˆ—‚ğÀs‚·‚éÛ‚ÌƒGƒ“ƒgƒŠƒ|ƒCƒ“ƒg‚Å‚·B
+     * ã‚¯ãƒ©ã‚¹ã‚’ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã—ã¦å‡¦ç†ã‚’å®Ÿè¡Œã™ã‚‹éš›ã®ã‚¨ãƒ³ãƒˆãƒªãƒã‚¤ãƒ³ãƒˆã§ã™ã€‚
      *
-     * @param input ˆ—‚Ì“ü—Íƒpƒ‰ƒ[ƒ^B
-     * @return ˆ—‚ÌÀsŒ‹‰ÊB
-     * @throws IOException “üo—Í—áŠO‚ª”­¶‚µ‚½ê‡B
-     * @throws IllegalArgumentException “ü—Í’l‚É•s³‚ªŒ©‚Â‚©‚Á‚½ê‡B
+     * @param input å‡¦ç†ã®å…¥åŠ›ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã€‚
+     * @return å‡¦ç†ã®å®Ÿè¡Œçµæœã€‚
+     * @throws IOException å…¥å‡ºåŠ›ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸå ´åˆã€‚
+     * @throws IllegalArgumentException å…¥åŠ›å€¤ã«ä¸æ­£ãŒè¦‹ã¤ã‹ã£ãŸå ´åˆã€‚
      */
     int execute(final BlancoDbMetaDataMeta2CsvProcessInput input) throws IOException, IllegalArgumentException;
 
     /**
-     * ˆ—‚Ì’†‚ÅƒAƒCƒeƒ€‚ªˆ—‚³‚ê‚é‚½‚Ñ‚Éi’»•ñ‚Æ‚µ‚ÄƒR[ƒ‹ƒoƒbƒN‚µ‚Ü‚·B
+     * å‡¦ç†ã®ä¸­ã§ã‚¢ã‚¤ãƒ†ãƒ ãŒå‡¦ç†ã•ã‚Œã‚‹ãŸã³ã«é€²æ—å ±å‘Šã¨ã—ã¦ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã—ã¾ã™ã€‚
      *
-     * @param argProgressMessage Œ»İˆ—‚µ‚Ä‚¢‚éƒAƒCƒeƒ€‚ÉŠÖ‚·‚éƒƒbƒZ[ƒWB
-     * @return ˆ—‚ğ‚»‚Ì‚Ü‚ÜŒp‘±‚·‚éê‡‚Í falseBˆ—’†’f‚ğƒŠƒNƒGƒXƒg‚µ‚½‚¢ê‡‚Í trueB
+     * @param argProgressMessage ç¾åœ¨å‡¦ç†ã—ã¦ã„ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã«é–¢ã™ã‚‹ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã€‚
+     * @return å‡¦ç†ã‚’ãã®ã¾ã¾ç¶™ç¶šã™ã‚‹å ´åˆã¯ falseã€‚å‡¦ç†ä¸­æ–­ã‚’ãƒªã‚¯ã‚¨ã‚¹ãƒˆã—ãŸã„å ´åˆã¯ trueã€‚
      */
     boolean progress(final String argProgressMessage);
 }

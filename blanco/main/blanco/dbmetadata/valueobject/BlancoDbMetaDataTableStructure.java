@@ -1,309 +1,309 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚è©“®¶¬‚³‚ê‚Ü‚µ‚½B
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã‚Šè‡ªå‹•ç”Ÿæˆã•ã‚Œã¾ã—ãŸã€‚
  */
 package blanco.dbmetadata.valueobject;
 
 import java.util.List;
 
 /**
- * •\‚Ì’è‹`î•ñ‚ğŠi”[‚µ‚Ü‚·B
+ * è¡¨ã®å®šç¾©æƒ…å ±ã‚’æ ¼ç´ã—ã¾ã™ã€‚
  */
 public class BlancoDbMetaDataTableStructure {
     /**
-     * ƒƒ^î•ñ‚Ì TABLE_NAME
+     * ãƒ¡ã‚¿æƒ…å ±ã® TABLE_NAME
      *
-     * ƒtƒB[ƒ‹ƒh: [NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [NAME]ã€‚
      */
     private String fName;
 
     /**
-     * ƒƒ^î•ñ‚Ì TABLE_TYPE
+     * ãƒ¡ã‚¿æƒ…å ±ã® TABLE_TYPE
      *
-     * ƒtƒB[ƒ‹ƒh: [TYPE]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [TYPE]ã€‚
      */
     private String fType;
 
     /**
-     * ƒƒ^î•ñ‚Ì TABLE_CAT
+     * ãƒ¡ã‚¿æƒ…å ±ã® TABLE_CAT
      *
-     * ƒtƒB[ƒ‹ƒh: [CATALOG]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [CATALOG]ã€‚
      */
     private String fCatalog;
 
     /**
-     * ƒƒ^î•ñ‚Ì TABLE_SCHEM
+     * ãƒ¡ã‚¿æƒ…å ±ã® TABLE_SCHEM
      *
-     * ƒtƒB[ƒ‹ƒh: [SCHEMA]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [SCHEMA]ã€‚
      */
     private String fSchema;
 
     /**
-     * ƒƒ^î•ñ‚Ì REMARKS
+     * ãƒ¡ã‚¿æƒ…å ±ã® REMARKS
      *
-     * ƒtƒB[ƒ‹ƒh: [REMARKS]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [REMARKS]ã€‚
      */
     private String fRemarks;
 
     /**
-     * •\‚ÉŠÜ‚Ü‚ê‚é€–ÚB
+     * è¡¨ã«å«ã¾ã‚Œã‚‹é …ç›®ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [columns]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [columns]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure>()]ã€‚
      */
     private List<blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure> fColumns = new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure>();
 
     /**
-     * •\‚ÉŠÜ‚Ü‚ê‚éƒvƒ‰ƒCƒ}ƒŠƒL[î•ñB
+     * è¡¨ã«å«ã¾ã‚Œã‚‹ãƒ—ãƒ©ã‚¤ãƒãƒªã‚­ãƒ¼æƒ…å ±ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh: [primaryKeys]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [primaryKeys]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]ã€‚
      */
     private List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> fPrimaryKeys = new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>();
 
     /**
-     * ƒtƒB[ƒ‹ƒh: [importedKeys]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [importedKeys]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]ã€‚
      */
     private List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> fImportedKeys = new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>();
 
     /**
-     * ƒtƒB[ƒ‹ƒh: [exportedKeys]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [exportedKeys]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]ã€‚
      */
     private List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> fExportedKeys = new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>();
 
     /**
-     * ƒtƒB[ƒ‹ƒh: [crossReferenceKeys]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰: [crossReferenceKeys]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]ã€‚
      */
     private List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> fCrossReferenceKeys = new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>();
 
     /**
-     * ƒtƒB[ƒ‹ƒh [NAME] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [NAME] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì TABLE_NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® TABLE_NAME]ã€‚
      *
-     * @param argName ƒtƒB[ƒ‹ƒh[NAME]‚Éİ’è‚·‚é’lB
+     * @param argName ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[NAME]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setName(final String argName) {
         fName = argName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [NAME] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [NAME] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì TABLE_NAME]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® TABLE_NAME]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[NAME]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[NAME]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getName() {
         return fName;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [TYPE] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [TYPE] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì TABLE_TYPE]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® TABLE_TYPE]ã€‚
      *
-     * @param argType ƒtƒB[ƒ‹ƒh[TYPE]‚Éİ’è‚·‚é’lB
+     * @param argType ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[TYPE]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setType(final String argType) {
         fType = argType;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [TYPE] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [TYPE] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì TABLE_TYPE]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® TABLE_TYPE]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[TYPE]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[TYPE]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getType() {
         return fType;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [CATALOG] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [CATALOG] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì TABLE_CAT]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® TABLE_CAT]ã€‚
      *
-     * @param argCatalog ƒtƒB[ƒ‹ƒh[CATALOG]‚Éİ’è‚·‚é’lB
+     * @param argCatalog ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[CATALOG]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setCatalog(final String argCatalog) {
         fCatalog = argCatalog;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [CATALOG] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [CATALOG] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì TABLE_CAT]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® TABLE_CAT]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[CATALOG]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[CATALOG]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getCatalog() {
         return fCatalog;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [SCHEMA] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [SCHEMA] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì TABLE_SCHEM]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® TABLE_SCHEM]ã€‚
      *
-     * @param argSchema ƒtƒB[ƒ‹ƒh[SCHEMA]‚Éİ’è‚·‚é’lB
+     * @param argSchema ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[SCHEMA]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setSchema(final String argSchema) {
         fSchema = argSchema;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [SCHEMA] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [SCHEMA] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì TABLE_SCHEM]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® TABLE_SCHEM]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[SCHEMA]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[SCHEMA]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getSchema() {
         return fSchema;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [REMARKS] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [REMARKS] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì REMARKS]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® REMARKS]ã€‚
      *
-     * @param argRemarks ƒtƒB[ƒ‹ƒh[REMARKS]‚Éİ’è‚·‚é’lB
+     * @param argRemarks ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[REMARKS]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setRemarks(final String argRemarks) {
         fRemarks = argRemarks;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [REMARKS] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [REMARKS] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [ƒƒ^î•ñ‚Ì REMARKS]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [ãƒ¡ã‚¿æƒ…å ±ã® REMARKS]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[REMARKS]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[REMARKS]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public String getRemarks() {
         return fRemarks;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [columns] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [columns] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [•\‚ÉŠÜ‚Ü‚ê‚é€–ÚB]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [è¡¨ã«å«ã¾ã‚Œã‚‹é …ç›®ã€‚]ã€‚
      *
-     * @param argColumns ƒtƒB[ƒ‹ƒh[columns]‚Éİ’è‚·‚é’lB
+     * @param argColumns ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[columns]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setColumns(final List<blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure> argColumns) {
         fColumns = argColumns;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [columns] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [columns] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [•\‚ÉŠÜ‚Ü‚ê‚é€–ÚB]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [è¡¨ã«å«ã¾ã‚Œã‚‹é …ç›®ã€‚]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure>()]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[columns]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[columns]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public List<blanco.dbmetadata.valueobject.BlancoDbMetaDataColumnStructure> getColumns() {
         return fColumns;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [primaryKeys] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [primaryKeys] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [•\‚ÉŠÜ‚Ü‚ê‚éƒvƒ‰ƒCƒ}ƒŠƒL[î•ñB]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [è¡¨ã«å«ã¾ã‚Œã‚‹ãƒ—ãƒ©ã‚¤ãƒãƒªã‚­ãƒ¼æƒ…å ±ã€‚]ã€‚
      *
-     * @param argPrimaryKeys ƒtƒB[ƒ‹ƒh[primaryKeys]‚Éİ’è‚·‚é’lB
+     * @param argPrimaryKeys ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[primaryKeys]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setPrimaryKeys(final List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> argPrimaryKeys) {
         fPrimaryKeys = argPrimaryKeys;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [primaryKeys] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [primaryKeys] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒtƒB[ƒ‹ƒh‚Ìà–¾: [•\‚ÉŠÜ‚Ü‚ê‚éƒvƒ‰ƒCƒ}ƒŠƒL[î•ñB]B
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã®èª¬æ˜: [è¡¨ã«å«ã¾ã‚Œã‚‹ãƒ—ãƒ©ã‚¤ãƒãƒªã‚­ãƒ¼æƒ…å ±ã€‚]ã€‚
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[primaryKeys]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[primaryKeys]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> getPrimaryKeys() {
         return fPrimaryKeys;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [importedKeys] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [importedKeys] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * @param argImportedKeys ƒtƒB[ƒ‹ƒh[importedKeys]‚Éİ’è‚·‚é’lB
+     * @param argImportedKeys ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[importedKeys]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setImportedKeys(final List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> argImportedKeys) {
         fImportedKeys = argImportedKeys;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [importedKeys] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [importedKeys] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]B
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[importedKeys]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[importedKeys]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> getImportedKeys() {
         return fImportedKeys;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [exportedKeys] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [exportedKeys] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * @param argExportedKeys ƒtƒB[ƒ‹ƒh[exportedKeys]‚Éİ’è‚·‚é’lB
+     * @param argExportedKeys ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[exportedKeys]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setExportedKeys(final List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> argExportedKeys) {
         fExportedKeys = argExportedKeys;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [exportedKeys] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [exportedKeys] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]B
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[exportedKeys]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[exportedKeys]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> getExportedKeys() {
         return fExportedKeys;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [crossReferenceKeys] ‚Ì’l‚ğİ’è‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [crossReferenceKeys] ã®å€¤ã‚’è¨­å®šã—ã¾ã™ã€‚
      *
-     * @param argCrossReferenceKeys ƒtƒB[ƒ‹ƒh[crossReferenceKeys]‚Éİ’è‚·‚é’lB
+     * @param argCrossReferenceKeys ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[crossReferenceKeys]ã«è¨­å®šã™ã‚‹å€¤ã€‚
      */
     public void setCrossReferenceKeys(final List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> argCrossReferenceKeys) {
         fCrossReferenceKeys = argCrossReferenceKeys;
     }
 
     /**
-     * ƒtƒB[ƒ‹ƒh [crossReferenceKeys] ‚Ì’l‚ğæ“¾‚µ‚Ü‚·B
+     * ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ [crossReferenceKeys] ã®å€¤ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * ƒfƒtƒHƒ‹ƒg: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]B
+     * ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆ: [new java.util.ArrayList<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure>()]ã€‚
      *
-     * @return ƒtƒB[ƒ‹ƒh[crossReferenceKeys]‚©‚çæ“¾‚µ‚½’lB
+     * @return ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰[crossReferenceKeys]ã‹ã‚‰å–å¾—ã—ãŸå€¤ã€‚
      */
     public List<blanco.dbmetadata.valueobject.BlancoDbMetaDataKeyStructure> getCrossReferenceKeys() {
         return fCrossReferenceKeys;
     }
 
     /**
-     * ‚±‚ÌƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»‚ğæ“¾‚µ‚Ü‚·B
+     * ã“ã®ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * <P>g—pã‚Ì’ˆÓ</P>
+     * <P>ä½¿ç”¨ä¸Šã®æ³¨æ„</P>
      * <UL>
-     * <LI>ƒIƒuƒWƒFƒNƒg‚ÌƒVƒƒƒ[”ÍˆÍ‚Ì‚İ•¶š—ñ‰»‚Ìˆ—‘ÎÛ‚Æ‚È‚è‚Ü‚·B
-     * <LI>ƒIƒuƒWƒFƒNƒg‚ªzŠÂQÆ‚µ‚Ä‚¢‚éê‡‚É‚ÍA‚±‚Ìƒƒ\ƒbƒh‚Íg‚í‚È‚¢‚Å‚­‚¾‚³‚¢B
+     * <LI>ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®ã‚·ãƒ£ãƒ­ãƒ¼ç¯„å›²ã®ã¿æ–‡å­—åˆ—åŒ–ã®å‡¦ç†å¯¾è±¡ã¨ãªã‚Šã¾ã™ã€‚
+     * <LI>ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå¾ªç’°å‚ç…§ã—ã¦ã„ã‚‹å ´åˆã«ã¯ã€ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã¯ä½¿ã‚ãªã„ã§ãã ã•ã„ã€‚
      * </UL>
      *
-     * @return ƒoƒŠƒ…[ƒIƒuƒWƒFƒNƒg‚Ì•¶š—ñ•\Œ»B
+     * @return ãƒãƒªãƒ¥ãƒ¼ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ–‡å­—åˆ—è¡¨ç¾ã€‚
      */
     @Override
     public String toString() {
