@@ -104,6 +104,12 @@ public class BlancoDbMetaDataTable {
                     isCrossReferenceKeysAvailable = false;
                     System.out.println("クロス参照取得時に例外が発生:" + ex.toString());
                 }
+            } catch (NullPointerException ex) {
+            	// for MySQL JDBC Driver
+                if (isCrossReferenceKeysAvailable) {
+                    isCrossReferenceKeysAvailable = false;
+                    System.out.println("クロス参照取得時に例外が発生:" + ex.toString());
+                }
             }
         }
 
